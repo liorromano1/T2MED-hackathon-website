@@ -1,5 +1,5 @@
 import React from 'react';
-import {Btn} from '../Landing/index.jsx';
+import { Btn } from '../Landing/index.jsx';
 import './style.css';
 
 interface IJoinTeam {
@@ -24,7 +24,8 @@ const Member = ({info}: {info: any}) => {
   const {github, role, name, img, linkedin, bio} = info;
   return (
     <div className="member">
-      <img src={img} className="member-img" alt={name} />
+      <img
+       src={img} className={`member-img member-${name.replace(/\s+/g, '').toLowerCase()}`} alt={name} />
       <h3>{name}</h3>
       <p className="role">{role}</p>
       {bio && (
@@ -43,4 +44,5 @@ const Member = ({info}: {info: any}) => {
   );
 };
 
-export {JoinTeam, Member};
+export { JoinTeam, Member };
+

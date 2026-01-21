@@ -36,8 +36,8 @@ import yona from './Assets/judgei/yona.png';
 
 // Importing all Team members images  from Assets
 
-import gili from './Assets/teami/Gili Gipsz.jpg';
-import irina from './Assets/teami/irina.jpeg';
+import Ella from './Assets/teami/Ella.jpeg';
+import Lior from './Assets/teami/Lior.jpg';
 import mattan from './Assets/teami/Mattan Hoory.jpeg';
 import or from './Assets/teami/Or.jpeg';
 import yoel from './Assets/teami/Yoel_levy.jpg';
@@ -48,14 +48,14 @@ import second from './Assets/prizesi/second.png';
 import third from './Assets/prizesi/third.png';
 
 const TOP_SECTION = {
-  TITLE: 'T2MED 2025',
+  TITLE: 'T2MED 2026',
   Typed_effect: [
-    'Thank you for joining us!',
-    'Congratulations to all teams!',
-    'See you in 2026!'
+    'We are back for 2026! ',
+    'Get ready to innovate and create!',
+    'Registration will be open soon!' //  Registration is now open!
   ],
   SHORT_DESCRIPTION:
-    'T2MED 2025 has concluded! Thank you to all participants, mentors, and sponsors for making it an unforgettable event. Stay tuned for next year’s hackathon – see you in 2026!',
+    'T2MED 2026 is here! Applications are on there way. Join us to solve real-world clinical challenges and innovate with industry leaders. Secure your spot today!',
   IMG_SRC: boy,
   DISCORD_LINK: '',
   MENTORS_FORM_LINK: '',
@@ -105,12 +105,12 @@ const FOOTER = {
 
 const calenderStartingDate = {
   month: 5,
-  year: 2025
+  year: 2026
 };
 
 const schedule = [
   {
-    day: '5-5-2025',
+    day: '29-4-2026',
     events: [
       {
         title: 'Gathering & Refreshments',
@@ -160,7 +160,7 @@ const schedule = [
     ]
   },
   {
-    day: '14-5-2025',
+    day: '6-5-2026',
     events: [
       {
         title: 'Gathering',
@@ -190,7 +190,7 @@ const schedule = [
     ]
   },
   {
-    day: '15-5-2025',
+    day: '7-5-2026',
     events: [
       {
         title: 'Start Work + Breakfast',
@@ -246,7 +246,7 @@ const schedule = [
     ]
   },
   {
-    day: '16-5-2025',
+    day: '8-5-2026',
     events: [
       {
         title: 'Final Work',
@@ -320,20 +320,20 @@ const TeamInfo = [
   [
     //Array 1
     {
-      name: 'Irina Shkalikov',
-      role: 'Medicine and Biomedical Engineering',
-      linkedin: 'https://www.linkedin.com/in/irina-shkalikov/',
-      img: irina
+      name: 'Lior Romano',
+      role: 'Biomedical Engineering Student | R&D at Philips, Clinical Evidence',
+      linkedin: 'https://www.linkedin.com/in/lior-romano-607a06264/',
+      img: Lior
     },
     {
-      name: 'Gili Gipsz',
-      role: 'Biomedical and electrical engineering | Co-founder & CTO at Speculate Gynecology',
-      linkedin: 'https://www.linkedin.com/in/gili-gipsz/',
-      img: gili
+      name: 'Ella Furman',
+      role: 'Biotechnology and food engineering | former marketing manager at port.io',
+      linkedin: 'https://www.linkedin.com/in/ella-furman-013094213/',
+      img: Ella
     },
     {
       name: 'Or Ginsburg',
-      role: 'Medicine and Biomedical Engineering | Co-founder & CEO at Speculate Gynecology',
+      role: 'Biotechnology and food engineering | former marketing manager at port.io',
       linkedin: 'https://www.linkedin.com/in/or-ginsburg/',
       img: or
     }
@@ -521,3 +521,4 @@ export {
   TeamInfo,
   TOP_SECTION
 };
+

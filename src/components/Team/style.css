@@ -16,6 +16,8 @@
   display: block;
   margin: 0 auto;
   border: 5px solid rgb(87, 223, 183);
+  object-fit: cover;
+  object-position: center top;
 }
 
 h3 {
