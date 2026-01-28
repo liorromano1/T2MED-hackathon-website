@@ -1,3 +1,14 @@
+
+/*logos adjustments*/
+img.haemek-logo {
+  margin-top: 12px;
+}
+
+img.square {       /* Hillel logo */
+  margin-top: -38px; 
+}
+
+
 .member {
   text-align: center;
   margin-top: 5rem;
@@ -9,15 +20,44 @@
   align-items: center;
 }
 
-.member img {
+
+.member-img-wrapper {
   width: 22rem;
   height: 22rem;
   border-radius: 50%;
-  display: block;
+  overflow: hidden;
   margin: 0 auto;
   border: 5px solid rgb(87, 223, 183);
+}
+
+.member-img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center top;
+  transition: transform 0.3s ease;
+}
+
+
+/*a focus to a specific person - name as shows in the web itself, lower latters, without gaps*/
+.member-img.member-liorromano {
+  object-position: 50% 15%;
+  transform: scale(1.10);
+}
+
+.member-img.member-shahaflalo {
+  object-position: 50% 10%;
+  transform: scale(1.10);
+}
+
+.member-img.member-ellafurman {
+  object-position: 50% 5%;
+  transform: scale(1.05);
+}
+
+.member-img.member-mahmudikteelat {
+  object-position: 50% 20% !important;
+  transform: scale(1.50);
 }
 
 h3 {

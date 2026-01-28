@@ -8,15 +8,12 @@ import hackathonLogo from './Assets/hackathonLogo.png';
 
 import boy from './Assets/boy.png';
 
-import biztec from './Assets/sponsorsLogos/biztec.png';
-import bnaizion from './Assets/sponsorsLogos/bnai_zion-modified.png';
 import carmel from './Assets/sponsorsLogos/carmel-modified.png';
-import haemek from './Assets/sponsorsLogos/haemek-modified.png';
+import haemek from './Assets/sponsorsLogos/haemek.jpg';
 import hhi from './Assets/sponsorsLogos/hhi.png';
 import hililyafe from './Assets/sponsorsLogos/hilel_yafe-modified.png';
-import rambam from './Assets/sponsorsLogos/Rambam-modified.png';
+import rambam from './Assets/sponsorsLogos/Rambam.jpg';
 import rappaport from './Assets/sponsorsLogos/rappaport.png';
-import road2 from './Assets/sponsorsLogos/road2.png';
 import rticc from './Assets/sponsorsLogos/rticc-logo.png';
 
 import ami from './Assets/judgei/ami.jpg';
@@ -37,15 +34,17 @@ import yona from './Assets/judgei/yona.png';
 // Importing all Team members images  from Assets
 
 import Ella from './Assets/teami/Ella.jpeg';
-import Lior from './Assets/teami/Lior.jpg';
-import mattan from './Assets/teami/Mattan Hoory.jpeg';
-import or from './Assets/teami/Or.jpeg';
+import LiorRomano from './Assets/teami/Lior.jpg';
+import Mahmud from './Assets/teami/Mahmud_image.jpeg';
+import shahaf from './Assets/teami/Shahaf_image.jpeg';
 import yoel from './Assets/teami/Yoel_levy.jpg';
+
 
 // Prizees
 import first from './Assets/prizesi/first.png';
 import second from './Assets/prizesi/second.png';
 import third from './Assets/prizesi/third.png';
+
 
 const TOP_SECTION = {
   TITLE: 'T2MED 2026',
@@ -323,19 +322,19 @@ const TeamInfo = [
       name: 'Lior Romano',
       role: 'Biomedical Engineering Student | R&D at Philips, Clinical Evidence',
       linkedin: 'https://www.linkedin.com/in/lior-romano-607a06264/',
-      img: Lior
+      img: LiorRomano
     },
     {
       name: 'Ella Furman',
-      role: 'Biotechnology and food engineering | former marketing manager at port.io',
+      role: 'Biotechnology and Food Engineering | Former Marketing Manager at Port.io',
       linkedin: 'https://www.linkedin.com/in/ella-furman-013094213/',
       img: Ella
     },
     {
-      name: 'Or Ginsburg',
-      role: 'Biotechnology and food engineering | former marketing manager at port.io',
-      linkedin: 'https://www.linkedin.com/in/or-ginsburg/',
-      img: or
+      name: 'Mahmoud Ikteelat',
+      role: 'Medical Student',
+      linkedin: 'https://www.linkedin.com/in/mahmoud-ikteelat-b09263195?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+      img: Mahmud
     }
   ],
   [
@@ -347,10 +346,10 @@ const TeamInfo = [
       img: yoel
     },
     {
-      name: 'Mattan Hoory',
-      role: 'Data Science and Biotechnology',
-      linkedin: 'https://www.linkedin.com/in/mattan-hoory-2224b3239/',
-      img: mattan
+      name: 'Shahaf Lalo',
+      role: 'Medical Student | Former Special Forces Combat Paramedic',
+      linkedin: 'https://www.linkedin.com/in/shahaf-lalo?utm_source=share_via&utm_content=profile&utm_medium=member_ios',
+      img: shahaf
     }
   ]
 ];
@@ -439,9 +438,9 @@ const JudgesInfo = [
 
 const sponsorLogos = [
   [{src: carmel}, {src: haemek}, {src: hililyafe}], //Array 1
-  [{src: rambam}, {src: bnaizion}, {src: road2}], //Array 2
-  [{src: hhi}, {src: biztec}, {src: rticc}], //Array 3
-  [{src: rappaport}] //Array 3
+  [{src: rambam}, {src: rappaport}, {src: rticc}], //Array 2
+  [{src: hhi} ], //Array 3
+  [] //Array 3
 ];
 
 /** Instructions

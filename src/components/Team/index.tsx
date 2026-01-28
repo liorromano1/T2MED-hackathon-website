@@ -19,20 +19,28 @@ const JoinTeam: React.FC<IJoinTeam> = ({placeholder, formLink, content}) => {
   );
 };
 
-const Member = ({info}: {info: any}) => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const {github, role, name, img, linkedin, bio} = info;
+const Member = ({ info }: { info: any }) => {
+  const { role, name, img, linkedin, bio } = info;
+
   return (
     <div className="member">
-      <img
-       src={img} className={`member-img member-${name.replace(/\s+/g, '').toLowerCase()}`} alt={name} />
+      <div className="member-img-wrapper">
+        <img
+          src={img}
+          className={`member-img member-${name.replace(/\s+/g, '').toLowerCase()}`}
+          alt={name}
+        />
+      </div>
+
       <h3>{name}</h3>
       <p className="role">{role}</p>
+
       {bio && (
         <div className="bio-box">
           <p className="bio">{bio}</p>
         </div>
       )}
+
       <div className="social-links">
         {linkedin && (
           <a href={linkedin} target="_blank" rel="noopener noreferrer">
@@ -43,6 +51,8 @@ const Member = ({info}: {info: any}) => {
     </div>
   );
 };
+
+
 
 export { JoinTeam, Member };
 
