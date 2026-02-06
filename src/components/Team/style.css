@@ -39,7 +39,23 @@ img.square {       /* Hillel logo */
 }
 
 
-/*a focus to a specific person - name as shows in the web itself, lower latters, without gaps*/
+/*focus for images, (use names as shows in the web itself, lower latters, without gaps or dots)*/
+
+/*focus for judges*/
+.member-img.member-profamiaronheim {
+  object-position: 50% 10%;
+  transform: scale(1.75);
+}
+
+/*focus for team members*/
+.member-img.member-liorromano {
+  object-position: 50% 15%;
+  transform: scale(1.10);
+}
+.member-img.member-adiyankovich {
+  object-position: 50% 40%;
+  transform: scale(1.02);
+}
 .member-img.member-liorromano {
   object-position: 50% 15%;
   transform: scale(1.10);

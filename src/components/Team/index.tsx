@@ -27,7 +27,7 @@ const Member = ({ info }: { info: any }) => {
       <div className="member-img-wrapper">
         <img
           src={img}
-          className={`member-img member-${name.replace(/\s+/g, '').toLowerCase()}`}
+          className={`member-img member-${name.toLowerCase().replace(/[^a-z0-9]+/g, '')}`}
           alt={name}
         />
       </div>

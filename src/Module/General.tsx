@@ -8,6 +8,7 @@ import hackathonLogo from './Assets/hackathonLogo.png';
 
 import boy from './Assets/boy.png';
 
+import bneyzion100 from './Assets/sponsorsLogos/bneyzion100.png';
 import carmel from './Assets/sponsorsLogos/carmel-modified.png';
 import haemek from './Assets/sponsorsLogos/haemek.jpg';
 import hhi from './Assets/sponsorsLogos/hhi.png';
@@ -24,7 +25,7 @@ import hadas from './Assets/judgei/hadas.jpeg';
 import nissan from './Assets/judgei/nissan.jpg';
 import ronya from './Assets/judgei/ronya.jpeg';
 import yaakov from './Assets/judgei/yaakov.jpg';
-import yaron from './Assets/judgei/yaron.jpg';
+import yaron from './Assets/judgei/yaron_shefer.jpg';
 import yona from './Assets/judgei/yona.png';
 /** Put all your sponsors logo inside folder `sponsorLogos`
  * and import them in the above and update `src` in sponsorLogos
@@ -33,11 +34,11 @@ import yona from './Assets/judgei/yona.png';
 
 // Importing all Team members images  from Assets
 
+import adi from './Assets/teami/adi.jpeg';
 import Ella from './Assets/teami/Ella.jpeg';
 import LiorRomano from './Assets/teami/Lior.jpg';
 import Mahmud from './Assets/teami/Mahmud_image.jpeg';
 import shahaf from './Assets/teami/Shahaf_image.jpeg';
-import yoel from './Assets/teami/Yoel_levy.jpg';
 
 
 // Prizees
@@ -340,10 +341,10 @@ const TeamInfo = [
   [
     //Array 2
     {
-      name: 'Yoel Levy',
-      role: 'Medicine',
-      linkedin: 'https://www.linkedin.com/in/yoelevy/',
-      img: yoel
+      name: 'Adi Yankovich',
+      role: 'Medical Student',
+      linkedin: 'https://www.linkedin.com/in/adi-yankovich-5b1019357?utm_source=share_via&utm_content=profile&utm_medium=member_ios',
+      img: adi
     },
     {
       name: 'Shahaf Lalo',
@@ -381,7 +382,7 @@ const JudgesInfo = [
     {
       name: 'Yaron Sheffer',
       role: 'Strategic & Innovation Director, Emek Medical Center',
-      bio: 'A visionary leader with over 18 years of experience in healthcare innovation, strategic planning, and operational management. As Director of Strategy & Innovation at Emek Medical Center, he drives international partnerships, entrepreneurship, and hospital growth initiatives. Previously, he managed healthcare operations for Maccabi, overseeing large-scale medical teams and multimillion-dollar budgets. Passionate about digital health, he mentors startups and leads executive training programs. With a background in military medical training and an MBA in Nonprofit Management, he blends leadership, strategy, and hands-on execution to transform healthcare systems.',
+      bio: 'A visionary leader with over 18 years of experience in healthcare innovation, strategic planning, and operational management. As Director of Strategy & Innovation at Emek Medical Center, he drives international partnerships, entrepreneurship, and hospital growth initiatives. Previously, he managed healthcare operations for Maccabi, overseeing large-scale medical teams and multimillion-dollar budgets. Passionate about digital health, he mentors startups and leads executive training programs. With a background in military medical training and an MBA in Nonprofit Management, he blends leadership, strategy, and hands-on execution to transform healthcare systems',
       img: yaron
     },
     {
@@ -439,7 +440,7 @@ const JudgesInfo = [
 const sponsorLogos = [
   [{src: carmel}, {src: haemek}, {src: hililyafe}], //Array 1
   [{src: rambam}, {src: rappaport}, {src: rticc}], //Array 2
-  [{src: hhi} ], //Array 3
+  [{src: hhi}, {src: bneyzion100}], //Array 3
   [] //Array 3
 ];
 
