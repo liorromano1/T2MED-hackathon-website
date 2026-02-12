@@ -19,11 +19,8 @@ import rticc from './Assets/sponsorsLogos/rticc-logo.png';
 
 import ami from './Assets/judgei/ami.jpg';
 import avi from './Assets/judgei/avi.jpg';
-import benny from './Assets/judgei/benny.jpg';
-import eliezer from './Assets/judgei/eliezer.png';
-import hadas from './Assets/judgei/hadas.jpeg';
-import nissan from './Assets/judgei/nissan.jpg';
-import ronya from './Assets/judgei/ronya.jpeg';
+// import benny from './Assets/judgei/benny.jpg';
+import Alona from './Assets/judgei/Alona_Matviychuk.jpg';
 import yaakov from './Assets/judgei/yaakov.jpg';
 import yaron from './Assets/judgei/yaron_shefer.jpg';
 import yona from './Assets/judgei/yona.png';
@@ -73,7 +70,7 @@ const SOCIALS = {
 const MIDDLE_SECTION = {
   TITLE: 'What is T2MED?',
   LONG_DESCRIPTION:
-    'T2MED is a unique 3-day hackathon happening on 14-16 May 2025 at the Technion Faculty of Medicine. Unlike other hackathons, T2MED is deeply rooted in clinical challenges, bringing together students from all faculties to collaborate with doctors, medical researchers, and healthcare professionals from top hospitals and clinics. Work alongside real clinicians, tackle pressing medical problems, and develop innovative solutions with direct guidance from experts. Gain hands-on experience, expand your network in both medicine and technology, and compete for incredible prizes!',
+    'T2MED is a unique 3-day hackathon happening on 6-8 May 2026 at the Technion Faculty of Medicine. Unlike other hackathons, T2MED is deeply rooted in clinical challenges, bringing together students from all faculties to collaborate with doctors, medical researchers, and healthcare professionals from top hospitals and clinics. Work alongside real clinicians, tackle pressing medical problems, and develop innovative solutions with direct guidance from experts. Gain hands-on experience, expand your network in both medicine and technology, and compete for incredible prizes!',
   LOGO: hackathonLogo
 };
 
@@ -371,10 +368,10 @@ const JudgesInfo = [
       img: avi
     },
     {
-      name: 'Dr. Benyamine Abbou',
-      role: 'Deputy Director, Hillel Yaffe Medical Center',
-      bio: 'Dr. Abbou Benyamine is a seasoned healthcare executive and expert in general surgery with extensive experience in medical leadership and hospital management. He currently holds the position of Deputy Director at Hillel Yaffe Medical Center. With an MHA in Health Systems Management from BGU and advanced executive training from Tel Aviv University, he specializes in healthcare administration, strategic planning, and operational excellence.',
-      img: benny
+      name: 'Dr. Alona Matviychuk',
+      role: 'Deputy Director of Emek Medical Center',
+      bio: 'Dr. Alona Matviychuk is a senior healthcare executive and medical leader, currently serving as Deputy Director of Emek Medical Center. She is an internal medicine specialist with extensive experience in hospital management, clinical operations, and healthcare system leadership. Dr.Matviychuk holds an MHA in Health Systems Management and, in her current role, promotes organization-wide quality processes, as well as strategic initiatives in patient care quality, operational efficiency, and organizational development within large medical centers. ',
+      img: Alona
     }
   ],
   [
@@ -386,10 +383,10 @@ const JudgesInfo = [
       img: yaron
     },
     {
-      name: 'Prof. Eliezer Shalev',
-      role: 'President, Tel-Hai Academic College | Expert in Obstetrics & Gynecology',
-      bio: 'Prof. Eliezer Shalev is a groundbreaking researcher and leader in obstetrics, gynecology, and fetal medicine, formerly heading the Ultrasound Unit at Sheba Medical Center (1988) And the Women & Maternity Division at HaEmek Medical Center (1989-2016). He served as Dean of the Technion Faculty of Medicine (2011–2016) and later Executive Pro-vice chancellor & Vice-Chancellor at Technion’s Guangdong campus in China. Since 2022, he has been President of Tel-Hai Academic College, leading its transition into the University of the Galilee. A recipient of the 2017 Lifetime Achievement Award in Medicine, he continues to pioneer research in childbirth and fertility. He is also the founder of the T2MED Hackathon, driving medical innovation.',
-      img: eliezer
+      name: 'Yaakov Diminsky',
+      role: 'CEO at Road2',
+      bio: 'Yaakov Diminsky holds an MSc in Biomedical Engineering and an MBA from the Technion. He specializes in developing business and technological strategies for early-stage startups. Yaakov has a background in leading R&D for technologies that combine bio-sensing with artificial intelligence. He also lectures on business and technological development in the deep-tech field as part of startup acceleration programs.',
+      img: yaakov
     },
     {
       name: 'Dr. Yona Vaisbuch',
@@ -398,37 +395,37 @@ const JudgesInfo = [
       img: yona
     }
   ],
-  [
-    //Array 3
-    {
-      name: 'Nissan Elimelech',
-      role: "Medtech serial entrepreneur, Augmedics' Founder & ex-CEO",
-      bio: 'Nissan is a serial entrepreneur with two decades’ experience in various medical device markets and the inventor of 15 patents. He founded Augmedics, a MedTech company which develops and commercializes the xvision™ – The first Augmented-Reality Guidance System for spine surgery. Nissan served the company as its CEO for more than 7 years, raised $63m from top-tier US VCs, and led it from inception to a multi-million-dollar revenue organization with a full-scale US nationwide commercial team. Prior to Augmedics, he worked in Medtronic at the spine surgery unit, and in Neopharm at the general surgery unit. In addition, he co-founded and was the inventor of another medical device start-up, Medizn, which developed a smart surgical hernia mesh. Nissan is a Biomedical engineer and MBA graduate.',
-      img: nissan
-    },
-    {
-      name: 'Ronya Rubinstein',
-      role: 'Entrepreneur, Endospot Founder & CEO',
-      bio: 'Ronya Rubinstein is an entrepreneur with a passion for navigating the intersections of science, business, regulations, ethics, patents, legal,  reimbursement and people. Formerly, director of the R&D unit at Rambam hospital, Ronya has vast expertise in clinical trials, technology transfer and digital health, held various board positions including at Mego-Afkek and MindUp incubator. Ronya also serves as the head of the health and gender committee at the National Committee for advancing Women in Science.',
-      img: ronya
-    },
-    {
-      name: 'Yaakov Diminsky',
-      role: 'CEO at Road2',
-      bio: 'Yaakov Diminsky holds an MSc in Biomedical Engineering and an MBA from the Technion. He specializes in developing business and technological strategies for early-stage startups. Yaakov has a background in leading R&D for technologies that combine bio-sensing with artificial intelligence. He also lectures on business and technological development in the deep-tech field as part of startup acceleration programs.',
-      img: yaakov
-    }
-  ],
-  [
-    //Array 4
+  // [
+  //   //Array 3
+  //   {
+  //     name: 'Nissan Elimelech',
+  //     role: "Medtech serial entrepreneur, Augmedics' Founder & ex-CEO",
+  //     bio: 'Nissan is a serial entrepreneur with two decades’ experience in various medical device markets and the inventor of 15 patents. He founded Augmedics, a MedTech company which develops and commercializes the xvision™ – The first Augmented-Reality Guidance System for spine surgery. Nissan served the company as its CEO for more than 7 years, raised $63m from top-tier US VCs, and led it from inception to a multi-million-dollar revenue organization with a full-scale US nationwide commercial team. Prior to Augmedics, he worked in Medtronic at the spine surgery unit, and in Neopharm at the general surgery unit. In addition, he co-founded and was the inventor of another medical device start-up, Medizn, which developed a smart surgical hernia mesh. Nissan is a Biomedical engineer and MBA graduate.',
+  //     img: nissan
+  //   },
+  //   {
+  //     name: 'Ronya Rubinstein',
+  //     role: 'Entrepreneur, Endospot Founder & CEO',
+  //     bio: 'Ronya Rubinstein is an entrepreneur with a passion for navigating the intersections of science, business, regulations, ethics, patents, legal,  reimbursement and people. Formerly, director of the R&D unit at Rambam hospital, Ronya has vast expertise in clinical trials, technology transfer and digital health, held various board positions including at Mego-Afkek and MindUp incubator. Ronya also serves as the head of the health and gender committee at the National Committee for advancing Women in Science.',
+  //     img: ronya
+  //   },
+  //   {
+  //     name: 'Prof. Eliezer Shalev',
+  //     role: 'President, Tel-Hai Academic College | Expert in Obstetrics & Gynecology',
+  //     bio: 'Prof. Eliezer Shalev is a groundbreaking researcher and leader in obstetrics, gynecology, and fetal medicine, formerly heading the Ultrasound Unit at Sheba Medical Center (1988) And the Women & Maternity Division at HaEmek Medical Center (1989-2016). He served as Dean of the Technion Faculty of Medicine (2011–2016) and later Executive Pro-vice chancellor & Vice-Chancellor at Technion’s Guangdong campus in China. Since 2022, he has been President of Tel-Hai Academic College, leading its transition into the University of the Galilee. A recipient of the 2017 Lifetime Achievement Award in Medicine, he continues to pioneer research in childbirth and fertility. He is also the founder of the T2MED Hackathon, driving medical innovation.',
+  //     img: eliezer
+  //   },
+  // ],
+  // [
+  //   //Array 4
 
-    {
-      name: 'Hadas Shachaf',
-      role: 'Director of Pharmaceutical Services, Bnai Zion Medical Center',
-      bio: 'Hadas Shachaf is the Director of Pharmacy Services at Bnei Zion Medical Center in Haifa. She focuses on improving medication safety and operational efficiency through pharmacy automation and cross-sector collaboration. In recent years, she has helped implement a centralized Unit Dose system and supported national and academic research on drug shortages and inventory management. Her work aims to combine innovation with practical solutions for public hospital settings.',
-      img: hadas
-    }
-  ]
+  //   {
+  //     name: 'Hadas Shachaf',
+  //     role: 'Director of Pharmaceutical Services, Bnai Zion Medical Center',
+  //     bio: 'Hadas Shachaf is the Director of Pharmacy Services at Bnei Zion Medical Center in Haifa. She focuses on improving medication safety and operational efficiency through pharmacy automation and cross-sector collaboration. In recent years, she has helped implement a centralized Unit Dose system and supported national and academic research on drug shortages and inventory management. Her work aims to combine innovation with practical solutions for public hospital settings.',
+  //     img: hadas
+  //   }
+  // ]
 ];
 
 /** Instructions

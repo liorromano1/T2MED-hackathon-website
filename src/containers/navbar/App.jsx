@@ -1,14 +1,14 @@
-import {useEffect, useRef, useState} from 'react';
-import {Route, BrowserRouter as Router, Switch} from 'react-router-dom';
-import {HashLink as Link} from 'react-router-hash-link';
+import { useEffect, useRef, useState } from 'react';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 import styled from 'styled-components';
-import technion100 from '../../Module/Assets/sponsorsLogos/technion100_medicine_eng.png';
+import technion_medicine_logo from '../../Module/Assets/sponsorsLogos/medicine.png';
 import HomePage from '../Home/HomePage';
 import logoClose from './assets/ham-c.svg';
 import hamLogo from './assets/ham.svg';
 import './styles.scss';
 
-import {MdxContent} from '../Mdx';
+import { MdxContent } from '../Mdx';
 
 const NAVIGATION_OFFSET = 66;
 
@@ -96,7 +96,7 @@ const NAVBAR = props => {
   return (
     <Router>
       {/* Mobile logo, always visible */}
-      <img className="mobile-logo" src={technion100} alt="Company Logo" />
+      <img className="mobile-logo" src={technion_medicine_logo} alt="Company Logo" />
 
       <nav className={`nav_bar ${isOffset && 'nav_bar-offset-crossed'}`}>
         <Wrapper toggle={toggle}>
@@ -141,7 +141,7 @@ const NAVBAR = props => {
             </ul>
             <img
               className="company-logo"
-              src={technion100}
+              src={technion_medicine_logo}
               alt="Company Logo"
             />
           </div>
