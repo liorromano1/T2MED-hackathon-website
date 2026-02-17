@@ -1,4 +1,4 @@
-import hackathonLogo from './Assets/hackathonLogo.png';
+import hackathonLogo from './Assets/hackathonLogo_circle.jpeg';
 
 // Importing all sponsors logos from Assets
 /** Put all your Team member image inside folder `Team Images`
@@ -462,11 +462,11 @@ const frequentlyAskedQuestions = [
         content:
           'Students from all faculties at the Technion, including technology, sciences, medicine, and business.'
       },
-      {
-        label: 'Do I need a team to register?',
-        content:
-          'No, you can register individually and form a team at the orientation meeting on 5 May 2025.'
-      },
+      // {
+      //   label: 'Do I need a team to register?',
+      //   content:
+      //     'No, you can register individually and form a team at the orientation meeting on 5 May 2025.'
+      // },
       {
         label: 'What will we do during the hackathon?',
         content:
