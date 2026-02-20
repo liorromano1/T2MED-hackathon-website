@@ -59,7 +59,7 @@ class Accordion extends React.Component {
     super(props);
 
     this.state = {
-      activeTab: 1
+      activeTab: -1
     };
 
     this.activateTab = this.activateTab.bind(this);

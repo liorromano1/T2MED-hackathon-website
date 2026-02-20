@@ -90,28 +90,79 @@ const FrequentlyAsked = (props, index) => {
 };
 
 const TracksSection = () => {
+  const [activeTrackId, setActiveTrackId] = useState('diagnostics');
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
   const tracks = [
     {
-      title: 'Surgical Innovation',
-      description:
-        'Tools, devices, and workflows that make surgery safer, faster, and more precise.'
-    },
-    {
+      id: 'diagnostics',
       title: 'Diagnostics & Early Detection',
+      hero: 'From data to detection.',
+      teaser: 'Smarter screening and earlier diagnosis.',
       description:
-        'Novel methods to detect disease earlier using smarter screening and analysis.'
+        'Design technologies that identify disease earlier and more accurately — from AI-powered screening to home-based monitoring solutions.',
+      bullets: [
+        'Early signal detection',
+        'Non-invasive screening',
+        'Computer vision & medical imaging',
+        'Accessible diagnostics beyond hospitals'
+      ]
     },
     {
+      id: 'surgical',
+      title: 'Surgical Innovation',
+      hero: 'Precision under pressure.',
+      teaser: 'Safer, smarter operating rooms.',
+      description:
+        'Reimagine the operating room with smarter tools, real-time guidance, and technologies that reduce complications and enhance surgical performance.',
+      bullets: [
+        'AI-assisted guidance',
+        'Smart OR workflow',
+        'Robotic & interventional systems',
+        'Safety & infection prevention'
+      ]
+    },
+    {
+      id: 'emergency',
       title: 'Emergency Medicine',
+      hero: 'Innovation in the first critical minutes.',
+      teaser: 'Real-time care from field to trauma room.',
       description:
-        'Rapid-response solutions for triage, stabilization, and critical care settings.'
+        'Develop solutions for emergency care — from the field to the ambulance to the trauma room — built to perform under pressure and uncertainty.',
+      bullets: [
+        'Portable diagnostics',
+        'Smart triage systems',
+        'Ambulance-to-hospital data flow',
+        'Wearable monitoring'
+      ]
     },
     {
+      id: 'management',
       title: 'Healthcare Management & Logistics',
+      hero: 'Fix the bottlenecks. Free the clinicians.',
+      teaser: 'Operational innovation that improves flow.',
       description:
-        'Operational innovations that improve coordination, access, and resource flow.'
+        'Engineer smarter healthcare systems by optimizing scheduling, logistics, data flow, and operational decision-making.',
+      bullets: [
+        'Dynamic prioritization',
+        'Patient flow optimization',
+        'Documentation automation',
+        'Resource utilization'
+      ]
     }
   ];
+
+  const activeTrack = tracks.find((t) => t.id === activeTrackId);
+
+  const handleTrackSelect = (trackId) => {
+    if (trackId !== activeTrackId) {
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setActiveTrackId(trackId);
+        setIsTransitioning(false);
+      }, 150);
+    }
+  };
 
   return (
     <section className="tracks-mock-wrapper" id="tracks">
@@ -127,14 +178,50 @@ const TracksSection = () => {
         </p>
       </div>
 
-      <div className="tracks-grid">
-        <div className="tracks-grid-cards">
-          {tracks.map((track) => (
-            <div className="tracks-grid-card" key={track.title}>
-              <h3>{track.title}</h3>
-              <p>{track.description}</p>
-            </div>
-          ))}
+      <div className="tracks-layout">
+        {/* Left Panel: Selectable Track List */}
+        <div className="tracks-list">
+          {tracks.map((track) => {
+            const isActive = track.id === activeTrackId;
+            return (
+              <button
+                key={track.id}
+                className={`track-compact-card ${isActive ? 'active' : ''}`}
+                onClick={() => handleTrackSelect(track.id)}
+                aria-pressed={isActive}
+                aria-controls="track-details-panel"
+              >
+                <h3 className="track-compact-title">{track.title}</h3>
+                <p className="track-compact-hero">{track.hero}</p>
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Right Panel: Track Details */}
+        <div
+          id="track-details-panel"
+          className={`track-details-panel ${isTransitioning ? 'transitioning' : ''}`}
+          role="region"
+          aria-live="polite"
+        >
+          {activeTrack && (
+            <>
+              <h2 className="track-details-title">{activeTrack.title}</h2>
+              <p className="track-details-hero">{activeTrack.hero}</p>
+              <p className="track-details-description">
+                {activeTrack.description}
+              </p>
+              <div className="track-details-focus">
+                <h4>Focus Areas</h4>
+                <ul>
+                  {activeTrack.bullets.map((bullet, idx) => (
+                    <li key={idx}>{bullet}</li>
+                  ))}
+                </ul>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </section>

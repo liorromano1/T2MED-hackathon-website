@@ -1,4 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600&display=swap');
+:root {
+  --nav-offset: 60px;
+}
+
+@media (min-width: 1000px) {
+  :root {
+    --nav-offset: 70px;
+  }
+}
+
+
+#home,
+#faq,
+#tracks,
+#prizes,
+#sponsors,
+#judges,
+
+#home     { scroll-margin-top: 70px; }
+#faq      { scroll-margin-top: 90px; }
+#tracks   { scroll-margin-top: 70px; }
+#prizes   { scroll-margin-top: -160px; }
+#sponsors { scroll-margin-top: 50px; }
+#judges   { scroll-margin-top: 90px; }
+#team     { scroll-margin-top: 90px; }
+
 .Whole_div {
   background-repeat: repeat;
   background-size: auto 100vh;
@@ -110,7 +136,7 @@ a:hover {
 .tracks-mock-wrapper {
   text-align: center;
   margin: 24px auto 0;
-  padding: 24px 18vh 32px;
+  padding: 24px 18vh 100px;
   border-radius: 14px;
   background-color: rgba(45, 37, 79, 0.05);
   border-top: 4px solid #D4A017;
@@ -118,7 +144,7 @@ a:hover {
 
 .tracks-intro {
   max-width: 900px;
-  margin: 0 auto 20px;
+  margin: 0 auto 24px;
   text-align: center;
   color: #2D254F;
 }
@@ -136,40 +162,194 @@ a:hover {
   color: #666666;
 }
 
-.tracks-grid {
-  max-width: 1100px;
-  margin: 0 auto 32px;
-}
-
-.tracks-grid-cards {
+/* Master-Detail Layout */
+.tracks-layout {
+  max-width: 1200px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 28px;
+  align-items: start;
 }
 
-.tracks-grid-card {
+/* Left Panel: Track List */
+.tracks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.track-compact-card {
   background-color: #FFFFFF;
   border-radius: 12px;
-  padding: 20px 22px;
+  padding: 18px 20px;
   text-align: left;
   color: #2D254F;
   border-left: 4px solid #D4A017;
   box-shadow: 0 2px 8px rgba(45, 37, 79, 0.08);
-  transition: box-shadow 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  width: 100%;
+  font-family: inherit;
 }
 
-.tracks-grid-card:hover {
+.track-compact-card:hover {
   box-shadow: 0 4px 16px rgba(45, 37, 79, 0.12);
+  transform: translateX(2px);
 }
 
-.tracks-grid-card h3 {
+.track-compact-card.active {
+  border-left-width: 6px;
+  background-color: rgba(212, 160, 23, 0.04);
+  box-shadow: 0 4px 16px rgba(212, 160, 23, 0.2);
+}
+
+.track-compact-title {
   color: #2D254F;
-  margin-top: 0;
+  margin: 0 0 8px 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 0.5;
+}
+  
+.track-compact-hero {
+  font-style: italic;
+  font-weight: 600;
+  color: #D4A017;
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.3;
 }
 
-.tracks-grid-card p {
-  margin: 10px 0 0;
-  color: #666666;
+/* Right Panel: Track Details */
+.track-details-panel {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  padding: 28px 32px;
+  text-align: left;
+  color: #2D254F;
+  border-left: 4px solid #D4A017;
+  box-shadow: 0 2px 12px rgba(45, 37, 79, 0.1);
+  max-height: 400px;
+  overflow-y: auto;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.track-details-panel.transitioning {
+  opacity: 0.5;
+  transform: translateY(8px);
+}
+
+.track-details-title {
+  color: #2D254F;
+  margin: 0 0 10px 0;
+  font-size: 2.3rem;
+  font-weight: 900;
+  line-height: 0.8;
+}
+
+.track-details-hero {
+  font-style: italic;
+  font-weight: 900;
+  color: #D4A017;
+  margin: 0 0 16px 0;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.track-details-description {
+  margin: 0 0 25px 0;
+  color: #555555;
+  font-weight: 430;
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
+
+.track-details-focus {
+  display: block;
+}
+
+.track-details-focus h4 {
+  color: #2D254F;
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+}
+
+.track-details-focus ul {
+  display: block;
+  margin: 0;
+  padding-left: 24px;
+  color: #555555;
+  list-style-type: disc;
+}
+
+.track-details-focus ul li {
+  display: list-item;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  font-weight: 430;
+  line-height: 1.4;
+}
+
+.track-details-focus ul li:last-child {
+  margin-bottom: 1px;
+}
+
+/* Responsive: Tablet & Mobile */
+@media (max-width: 900px) {
+  .tracks-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .tracks-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .track-details-panel {
+    max-height: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  .tracks-mock-wrapper {
+    padding: 24px 6vw 80px;
+  }
+
+  .tracks-list {
+    grid-template-columns: 1fr;
+  }
+
+  .track-compact-card {
+    padding: 16px 18px;
+  }
+
+  .track-details-panel {
+    padding: 24px 20px;
+    max-height: 380px;
+  }
+
+  .track-details-title {
+    font-size: 1.6rem;
+  }
+
+  .track-details-description {
+    font-size: 1.05rem;
+  }
+
+  .track-details-focus h4 {
+    font-size: 1.15rem;
+  }
+
+  .track-details-focus ul li {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 570px) {
@@ -201,14 +381,6 @@ a:hover {
   .logoSection {
     text-align: center;
     padding: 20vh 0vh 0 0vh;
-  }
-
-  .tracks-mock-wrapper {
-    padding: 24px 6vw 32px;
-  }
-
-  .tracks-grid-cards {
-    grid-template-columns: 1fr;
   }
 
 }
