@@ -4,13 +4,14 @@
   background-size: auto 100vh;
   font-family: 'Montserrat', sans-serif;
   position: relative;
+  background-color: #F7F8FC;
 }
 .mediaInfo {
   margin-top: 10vh;
   background-size: auto 100vh;
 }
 .color_sectiom {
-  background-color: #012943;
+  background-color: #2D254F;
   padding-bottom: 5rem;
 }
 .container-fluid {
@@ -22,6 +23,20 @@
 h1 {
   text-align: center;
   font-size: 5rem;
+  color: #2D254F;
+}
+
+h2 {
+  color: #2D254F;
+}
+
+a {
+  color: #2D254F;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #D4A017;
 }
 .Row {
   text-align: center;
@@ -52,16 +67,22 @@ h1 {
 .members {
   padding: 0vh 10vh 0 10vh;
 }
+
+
 .prizesection {
   text-align: center;
-  margin: 0 auto;
-  padding: 0 4vh 0 4vh;
-  margin: 17vh 0vh 0 0vh;
+  margin: 24px auto 0;      /* היה vh */
+  padding: 12px 0 4rem;     /* Increased bottom padding for BizTec spacing */
   border-radius: 14px;
   margin-top: 4vh;
-  background-color: #b1f2de;
-  padding-bottom: 4vh;
+  margin-bottom: 2rem;      /* Added bottom margin */
+  background-color: rgba(45, 37, 79, 0.05);
+  border-top: 4px solid #D4A017;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 
 .Prizes {
   width: 100%;
@@ -79,6 +100,78 @@ h1 {
   margin-top: -16vh;
 }
 
+.Myfaqs {
+  margin: 24px auto 0;
+  padding: 24px 0 32px;
+  background-color: rgba(45, 37, 79, 0.03);
+  border-top: 4px solid #D4A017;
+}
+
+.tracks-mock-wrapper {
+  text-align: center;
+  margin: 24px auto 0;
+  padding: 24px 18vh 32px;
+  border-radius: 14px;
+  background-color: rgba(45, 37, 79, 0.05);
+  border-top: 4px solid #D4A017;
+}
+
+.tracks-intro {
+  max-width: 900px;
+  margin: 0 auto 20px;
+  text-align: center;
+  color: #2D254F;
+}
+
+.tracks-intro-title {
+  font-weight: 600;
+  font-size: 20px;
+  margin: 0 0 8px;
+  color: #2D254F;
+}
+
+.tracks-intro-text {
+  margin: 0;
+  font-size: 17px;
+  color: #666666;
+}
+
+.tracks-grid {
+  max-width: 1100px;
+  margin: 0 auto 32px;
+}
+
+.tracks-grid-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.tracks-grid-card {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  padding: 20px 22px;
+  text-align: left;
+  color: #2D254F;
+  border-left: 4px solid #D4A017;
+  box-shadow: 0 2px 8px rgba(45, 37, 79, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+.tracks-grid-card:hover {
+  box-shadow: 0 4px 16px rgba(45, 37, 79, 0.12);
+}
+
+.tracks-grid-card h3 {
+  color: #2D254F;
+  margin-top: 0;
+}
+
+.tracks-grid-card p {
+  margin: 10px 0 0;
+  color: #666666;
+}
+
 @media (max-width: 570px) {
   .mediaInfo {
     margin-top: 0;
@@ -91,15 +184,15 @@ h1 {
     padding: 0;
     margin-top: 0vh;
   }
+  .Myfaqs {
+    margin: 24px 0 0 0;
+    padding: 24px 0 32px;
+  }
   .members {
     margin: 0;
     padding: 0;
   }
 
-  .prizesection {
-    margin: 5vh 0 0 0;
-    padding: 17vh 0 0 4vh;
-  }
   .sponsorSection {
     padding: 0;
     margin: 0;
@@ -109,4 +202,13 @@ h1 {
     text-align: center;
     padding: 20vh 0vh 0 0vh;
   }
+
+  .tracks-mock-wrapper {
+    padding: 24px 6vw 32px;
+  }
+
+  .tracks-grid-cards {
+    grid-template-columns: 1fr;
+  }
+
 }

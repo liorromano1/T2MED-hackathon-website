@@ -15,9 +15,14 @@ button {
   border-radius: 19px;
   font-size: 2rem;
   color: rgb(255, 255, 255);
-  background-color: #57DFB7;
+  background-color: #D4A017;
   font-weight: bold;
   position: relative;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #B8860B;
 }
 
 .join_disco {
@@ -49,6 +54,8 @@ button {
 .AboutMe h2 {
   font-size: 8rem;
   font-family: 'Noto Sans', sans-serif;
+  color: #FFFFFF;
+  margin: 0;
 }
 
 p {
@@ -60,10 +67,35 @@ p {
 .Myinfo {
   text-align: left;
   margin-left: 10vh;
+  color: #FFFFFF;
 }
 
 .Myinfo p {
   width: 70%;
+}
+
+.hero-cta-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+  width: 70%;
+}
+
+.hero-description {
+  margin: 0 0 auto 0;
+  color: #FFFFFF;
+  font-size: 2rem;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.hero-register {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.hero-register a {
+  text-decoration: none;
 }
 
 /* Over lay effect */
@@ -83,7 +115,7 @@ p {
 
 .overlay-text {
   font-weight: 300;
-  color: #2C4677;
+  color: #2D254F;
   font-size: 17px;
   position: absolute;
   top: 50%;
@@ -99,17 +131,15 @@ button:hover .overlay {
   left: 0;
 }
 
-@media (max-width: 1200px) {
-  .AboutMe h2 {
-    /* font-size: 6rem; */
-  }
-}
-
 /* main targer */
 
 @media (max-width: 570px) {
   .Myinfo p {
     width: 100%;
+  }
+  .hero-cta-wrapper {
+    width: 100%;
+    min-height: 280px;
   }
   .AboutMe h2 {
     font-size: 4rem;

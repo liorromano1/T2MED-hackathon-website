@@ -28,7 +28,12 @@ img.square {       /* Hillel logo */
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto;
-  border: 5px solid rgb(87, 223, 183);
+  border: 5px solid rgba(45, 37, 79, 0.35);
+  transition: border-color 0.3s ease;
+}
+
+.member:hover .member-img-wrapper {
+  border-color: #3A2F6E;
 }
 
 .member-img {
@@ -170,8 +175,8 @@ h3 {
 }
 
 .judges-info-text .highlight {
-  color: rgb(87, 223, 183);
-  text-decoration: underline;
+  color: #D4A017;
+  text-decoration: none;
   font-weight: 600;
 }
 

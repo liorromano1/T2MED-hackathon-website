@@ -30,16 +30,14 @@ class Panel extends React.Component {
     };
 
     return (
-      <div className="panel" role="tabpanel" aria-expanded={isActive}>
-        <button className="panel__label" role="tab" onClick={activateTab}>
+      <div className={`panel ${isActive ? 'panel--active' : ''}`} role="tabpanel">
+        <button className="panel__label" role="tab" onClick={activateTab} aria-expanded={isActive}>
           {label}
         </button>
         <div
           className="panel__inner"
           style={innerStyle}
           aria-hidden={!isActive}
-          // eslint-disable-next-line jsx-a11y/role-supports-aria-props
-          aria-expanded={isActive}
         >
           <p className="panel__content">
             {content}
@@ -92,4 +90,5 @@ class Accordion extends React.Component {
   }
 }
 
-export {Accordion};
+export { Accordion };
+

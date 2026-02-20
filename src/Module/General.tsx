@@ -38,10 +38,10 @@ import Mahmud from './Assets/teami/Mahmud_image.jpeg';
 import shahaf from './Assets/teami/Shahaf_image.jpeg';
 
 
-// Prizees
-import first from './Assets/prizesi/first.png';
-import second from './Assets/prizesi/second.png';
-import third from './Assets/prizesi/third.png';
+// Prize Assets - New format
+import airplainImg from './Assets/prizesi/2026prizes/Airplain.png';
+import espressoImg from './Assets/prizesi/2026prizes/Espresso_Machine.png';
+import garminImg from './Assets/prizesi/2026prizes/Garmin_VivoActive5.png';
 
 
 const TOP_SECTION = {
@@ -105,53 +105,60 @@ const calenderStartingDate = {
   year: 2026
 };
 
+const eventMetadata = {
+  title: 'Pre-Hackathon Day',
+  date: 'April 29, 2026',
+  time: '16:30 – 20:30',
+  location: 'Rambam Health Care Campus'
+};
+
 const schedule = [
   {
     day: '29-4-2026',
     events: [
       {
-        title: 'Gathering & Refreshments',
+        title: 'Reception & Networking',
         timings: '16:30 – 17:00',
         link: ''
       },
       {
-        title:
-          'Opening Talks (Auditorium): The T2MED Team – About T2MED and the orientation day',
+        title: 'Opening Remarks',
         timings: '17:00 – 17:15',
         link: ''
       },
       {
-        title:
-          'Guest Talk (Auditorium): Dr. Shay Perek – Need-Based Innovation using the Biodesign Method',
-        timings: '17:15 – 18:15',
+        title: 'Keynote Greeting – Dr. Lior Lev Tov',
+        timings: '17:15 – 17:30',
         link: ''
       },
       {
-        title:
-          'Welcome Remarks (Food Hall): Prof. Yaron Har-Shai, Vice Dean for Strategic Development',
-        timings: '18:30 – 18:45',
+        title: 'Guest Lecture – Entrepreneurship in the Med-Tech World',
+        timings: '17:30 – 18:30',
         link: ''
       },
       {
-        title:
-          'Round Tables (Food Hall): Team Building & Ideation – Participants and Mentors',
-        timings: '18:45 – 19:45',
+        title: "Winner's Showcase – Past T2MED 1st Place Winners",
+        timings: '18:30 – 18:35',
         link: ''
       },
       {
-        title: 'Break',
-        timings: '19:45 – 20:00',
+        title: 'Break & Transition',
+        timings: '18:35 – 19:00',
         link: ''
       },
       {
-        title: 'Pitches (Food Hall): Share your idea or challenge (3 min)',
-        timings: '20:00 – 20:30',
+        title: 'Field Exposure – Introduction to Each Field with Dedicated Mentors',
+        timings: '19:00 – 19:30',
         link: ''
       },
       {
-        title:
-          'Concluding Remarks & Online Check-In: Teams must confirm their registration',
-        timings: '20:30',
+        title: 'Brainstorming Session – Group Division and Initial Ideation Within Tracks',
+        timings: '19:30 – 20:15',
+        link: ''
+      },
+      {
+        title: 'Q&A & Closing – Hackathon Timeline and Summary',
+        timings: '20:15 – 20:30',
         link: ''
       }
     ]
@@ -293,16 +300,32 @@ const schedule = [
 const Prizeinfo = [
   [
     {
-      image: first,
-      title: '1st Place'
+      topLabel: '1st Place',
+      title: 'FLIGHT TICKETS',
+      subtitle: 'Up to 1,000$',
+      extra: '+3,000₪',
+      footer: 'Per team for project promotion',
+      image: airplainImg,
+      className: 'prize-flight',
+      footerText: 'One per participant'
     },
     {
-      image: second,
-      title: '2nd Place'
+      topLabel: '2nd Place',
+      title: 'GARMIN WATCH',
+      subtitle: 'VivoActive5',
+      footer: 'One per participant',
+      image: garminImg,
+      className: 'prize-watch',
+      footerText: 'One per participant'
     },
     {
-      image: third,
-      title: '3rd Place'
+      topLabel: '3rd Place',
+      title: 'NESPRESSO MACHINE',
+      subtitle: 'Delonghi Essenza',
+      footer: 'One per participant',
+      image: espressoImg,
+      className: 'prize-espresso',
+      footerText: 'One per participant'
     }
   ]
 ];
@@ -462,11 +485,11 @@ const frequentlyAskedQuestions = [
         content:
           'Students from all faculties at the Technion, including technology, sciences, medicine, and business.'
       },
-      // {
-      //   label: 'Do I need a team to register?',
-      //   content:
-      //     'No, you can register individually and form a team at the orientation meeting on 5 May 2025.'
-      // },
+      {
+        label: 'Do I need a team to register?',
+        content:
+          'No, you can register individually and form a team at the orientation meeting on 29 April 2026.'
+      },
       {
         label: 'What will we do during the hackathon?',
         content:
@@ -507,6 +530,7 @@ const frequentlyAskedQuestions = [
 
 export {
   calenderStartingDate,
+  eventMetadata,
   FOOTER,
   frequentlyAskedQuestions,
   JudgesInfo,

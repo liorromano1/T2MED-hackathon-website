@@ -1,23 +1,23 @@
-import {UseMedia} from 'hooks/useMedia';
-import {useState} from 'react';
+
+import { UseMedia } from 'hooks/useMedia';
+import { useState } from 'react';
 
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import {Logo, LogoSectionAbout} from '../../components/About/index.jsx';
-import {Accordion} from '../../components/Accordian/index.jsx';
+import { Logo, LogoSectionAbout } from '../../components/About/index.jsx';
+import { Accordion } from '../../components/Accordian/index.jsx';
 import Birds from '../../components/Animation';
-import CongratsSection from '../../components/CongratsSection';
 import Footer from '../../components/Footer/index.jsx';
-import {Myinfo} from '../../components/Landing/index.jsx';
-import {FirstPrize, PrizeHeading} from '../../components/Prizes/index.jsx';
+import { Myinfo } from '../../components/Landing/index.jsx';
+import { PrizeCard, PrizeHeading } from '../../components/Prizes/index.jsx';
 import Media from '../../components/Socials/index.jsx';
 import {
   Sponsor,
   SponsorsHead,
   SponsorUS
 } from '../../components/Sponsors/sponsors.jsx';
-import {Member} from '../../components/Team';
+import { Member } from '../../components/Team';
 import biztec from '../../Module/Assets/biztec_1.png';
 import {
   frequentlyAskedQuestions,
@@ -34,7 +34,7 @@ const SponsorGroup = (props, index) => {
   return (
     <Row key={index}>
       {props.map((s, i) => (
-        <Col key={i} className="" sm={12} lg={4} md={6}>
+        <Col key={s.src} className="" sm={12} lg={4} md={6}>
           <Sponsor srcx={s.src} altText={`Sponsor ${i + 1}`} />
         </Col>
       ))}
@@ -45,13 +45,22 @@ const SponsorGroup = (props, index) => {
 // Prize group
 const PrizeGroup = (props, index) => {
   return (
-    <Row className="prize-row">
-      {Prizeinfo[0].map((s, i) => (
-        <div className="prize-responsive-col" key={i}>
-          <FirstPrize image={s.image} title={s.title} />
+    <div className="prize-row" key={index}>
+      {props.map((s) => (
+        <div key={s.className} className={`prize-responsive-col ${s.className}`}>
+          <PrizeCard
+            topLabel={s.topLabel}
+            title={s.title}
+            subtitle={s.subtitle}
+            extra={s.extra}
+            footer={s.footer}
+            image={s.image}
+            className={s.className}
+            footerText={s.footerText}
+          />
         </div>
       ))}
-    </Row>
+    </div>
   );
 };
 
@@ -59,8 +68,8 @@ const PrizeGroup = (props, index) => {
 const TeamMembers = (props, index) => {
   return (
     <Row key={index} className="members">
-      {props.map((s, i) => (
-        <Col key={i} className="" sm={12} lg={4} md={4}>
+      {props.map((s) => (
+        <Col key={s.name} className="" sm={12} lg={4} md={4}>
           <Member info={s} />
         </Col>
       ))}
@@ -71,12 +80,64 @@ const TeamMembers = (props, index) => {
 const FrequentlyAsked = (props, index) => {
   return (
     <Row key={index} className="sf">
-      {props.map((s, i) => (
-        <Col key={i} sm={12} lg={6} md={6}>
-          <Accordion panels={s} />
+      {props.map((panel) => (
+        <Col key={panel[0]?.label || index} sm={12} lg={6} md={6}>
+          <Accordion panels={panel} />
         </Col>
       ))}
     </Row>
+  );
+};
+
+const TracksSection = () => {
+  const tracks = [
+    {
+      title: 'Surgical Innovation',
+      description:
+        'Tools, devices, and workflows that make surgery safer, faster, and more precise.'
+    },
+    {
+      title: 'Diagnostics & Early Detection',
+      description:
+        'Novel methods to detect disease earlier using smarter screening and analysis.'
+    },
+    {
+      title: 'Emergency Medicine',
+      description:
+        'Rapid-response solutions for triage, stabilization, and critical care settings.'
+    },
+    {
+      title: 'Healthcare Management & Logistics',
+      description:
+        'Operational innovations that improve coordination, access, and resource flow.'
+    }
+  ];
+
+  return (
+    <section className="tracks-mock-wrapper" id="tracks">
+      <h1>Tracks</h1>
+
+      <div className="tracks-intro">
+        <p className="tracks-intro-title">Choose Your Track</p>
+        <p className="tracks-intro-text">
+          This year we are introducing Tracks to focus the most impactful
+          healthcare challenges into four areas. Each team selects one track and
+          is judged within it first, then the top teams from every track advance
+          to the Grand Finale where overall winners are chosen.
+        </p>
+      </div>
+
+      <div className="tracks-grid">
+        <div className="tracks-grid-cards">
+          {tracks.map((track) => (
+            <div className="tracks-grid-card" key={track.title}>
+              <h3>{track.title}</h3>
+              <p>{track.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 
@@ -105,8 +166,8 @@ export default function HomePage() {
         </Container>
       </div>
       <Container fluid>
-        {/* Logo section  */}
-        <CongratsSection />
+        {/* 2025 WINNERS SECTION (TEMP DISABLED) - Re-enable after T2MED 2026 ends */}
+        {/* <CongratsSection /> */}
         <Row className=" logoSection">
           <Col className="info-div" sm={12} lg={8} md={8}>
             <LogoSectionAbout />
@@ -121,6 +182,8 @@ export default function HomePage() {
           {frequentlyAskedQuestions.map(FrequentlyAsked)}
           {/* ********Frequently asked Questions ending here ***** */}
         </div>
+
+        <TracksSection />
 
         {/* ********Prizes here ***** */}
         <Row className="prizesection" id="prizes">

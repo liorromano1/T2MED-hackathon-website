@@ -1,8 +1,339 @@
+// ==================== Refactored Prize Card Styles ====================
+
+.prize-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+}
+
+.prize-label-above {
+  font-size: 1.7rem;
+  font-weight: 900;
+  color: #2D254F;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  text-align: center;
+  margin-bottom: 12px;
+  line-height: 1.3;
+  font-family: 'Arial Black', 'Montserrat', sans-serif;
+  -webkit-text-stroke: 0.5px rgba(212, 160, 23, 0.3);
+}
+
+.prize-card-container.prize-espresso .prize-label-above {
+  transform: translateY(143px);
+}
+
+.prize-card-wrapper {
+  width: 100%;
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.prize-card-background {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(180deg, 
+    rgba(255, 255, 255, 0.96) 0%,
+    rgba(210, 200, 230, 0.15) 40%,
+    rgba(45, 37, 79, 0.95) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 15px;
+  box-shadow: 0 8px 24px rgba(45, 37, 79, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.prize-card-wrapper:hover .prize-card-background {
+  box-shadow: 0 12px 32px rgba(45, 37, 79, 0.3);
+}
+
+.prize-card-content {
+  z-index: 2;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 6px;
+  padding: 0 10px;
+}
+
+.prize-card-title {
+  font-size: 2.0rem;
+  font-weight: 900;
+  color: #2D254F;
+  margin: 10px 0 10px;
+  line-height: 1.3;
+  font-family: 'Arial Black', 'Montserrat', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.prize-title {
+  -webkit-text-stroke: 0.6px rgba(212, 160, 23, 0.55);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.35), 0 2px 6px rgba(45, 37, 79, 0.2);
+}
+
+.prize-card-subtitle {
+  font-size: 2.0rem;
+  font-weight: 700;
+  color: #2D254F;
+  margin: 0;
+  font-family: 'Arial', 'Montserrat', sans-serif;
+  line-height: 1.3;
+  letter-spacing: 0.3px;
+}
+
+.prize-card-extra {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #D4A017;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.prize-card-footer {
+  font-size: 0.8rem;
+  color: #666;
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.3;
+  font-family: 'Arial', 'Montserrat', sans-serif;
+}
+
+.prize-card-image-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65%;
+  height: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.prize-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.prize-bonus {
+  text-align: center;
+  color: rgba(45, 37, 79, 0.75);
+  font-family: 'Arial', 'Montserrat', sans-serif;
+}
+
+.prize-bonus-amount {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.prize-bonus-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.prize-label-below {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #666;
+  text-align: center;
+  margin-top: 6px;
+  line-height: 1.5;
+  font-family: 'Arial', 'Montserrat', sans-serif;
+}
+
+// ==================== Individual Prize Height & Style Customization ====================
+
+// 1st Place - Tallest card with premium styling
+.prize-flight .prize-card-background {
+  aspect-ratio: 3 / 4.2;
+  background: linear-gradient(180deg, 
+    rgba(255, 255, 255, 0.97) 0%,
+    rgba(212, 160, 23, 0.08) 35%,
+    rgba(45, 37, 79, 0.98) 100%);
+  overflow: visible;
+}
+
+.prize-flight .prize-card-title {
+  color: #D4A017;
+  font-size: 3.0rem;
+}
+
+.prize-flight .prize-card-image-container {
+  width: 80%;
+  height: 75%;
+}
+
+.prize-flight .prize-card-image {
+  transform: scale(1.65) translateY(25px);
+  max-width: 100%;
+}
+
+.prize-flight .prize-bonus {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+}
+
+.prize-flight .prize-bonus__amount {
+  font-size: 2.1rem;
+  line-height: 1.2;
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 700;
+}
+
+.prize-flight .prize-bonus__text {
+  font-size: 1.7rem;
+  line-height: 1.2;
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 600;
+}
+
+// 2nd Place - Medium height
+.prize-watch .prize-card-background {
+  aspect-ratio: 3 / 3.95;
+  background: linear-gradient(180deg, 
+    rgba(255, 255, 255, 0.96) 0%,
+    rgba(220, 210, 235, 0.12) 38%,
+    rgba(45, 37, 79, 0.96) 100%);
+}
+
+.prize-watch .prize-card-title {
+  color: #2D254F;
+  font-size: 2.5rem;
+}
+
+.prize-watch .prize-card-image-container {
+  width: 60%;
+  height: 60%;
+}
+
+.prize-watch .prize-card-image {
+  transform: scale(0.81) translateY(60px);
+  max-width: 100%;
+}
+
+// 3rd Place - Shortest card
+.prize-espresso .prize-card-background {
+  aspect-ratio: 3 / 3.7;
+  background: linear-gradient(180deg, 
+    rgba(255, 255, 255, 0.96) 0%,
+    rgba(225, 215, 240, 0.1) 40%,
+    rgba(45, 37, 79, 0.94) 100%);
+}
+
+.prize-espresso .prize-card-title {
+  color: #2D254F;
+  font-size: 2.3rem;
+  margin-top: 10px;
+}
+
+.prize-espresso .prize-card-subtitle {
+  margin-top: -2px;
+}
+
+.prize-espresso .prize-card-image-container {
+  width: 70%;
+  height: 70%;
+}
+
+.prize-espresso .prize-card-image {
+  transform: scale(1.6);
+  max-width: 100%;
+}
+
+.prize-espresso .prize-label-below {
+  transform: translateY(120px);
+}
+
+// ==================== Row & Grid Layout ====================
+
+.prize-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 6rem;
+  flex-wrap: nowrap;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.prize-responsive-col {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.prize-responsive-col.prize-espresso {
+  align-self: flex-end;
+  margin-bottom: 360px;
+}
+
+@media (max-width: 1200px) {
+  .prize-responsive-col {
+    max-width: 260px;
+  }
+  
+  .prize-row {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 960px) {
+  .prize-row {
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 2rem;
+  }
+  
+  .prize-responsive-col {
+    flex: 0 0 calc(50% - 1rem);
+    max-width: 100%;
+  }
+  
+
+}
+
+@media (max-width: 768px) {
+  .prize-responsive-col {
+    flex: 0 0 100%;
+    max-width: 300px;
+  }
+  
+  .prize-row {
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+// ==================== Original Styles (Maintained for compatibility) ====================
+
 .Prizes {
   width: fit-content;
   text-align: left;
   margin-top: 1.7rem;
 }
+
 .PrizeHeading h1 {
   font-size: 5rem;
   margin-bottom: 2rem;
@@ -41,27 +372,6 @@
   color: #e4bad4;
 }
 
-.prize-row {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  align-items: flex-end;
-}
-
-.prize-responsive-col {
-  flex: 0 0 30%;
-  display: flex;
-  justify-content: center;
-}
-
-@media (max-width: 768px) {
-  .prize-responsive-col {
-    flex: 0 0 100%; // 🔥 Stack full width on mobile
-    margin-bottom: 2rem;
-  }
-}
-
 .prize-col {
   display: flex;
   flex-direction: column;
@@ -83,10 +393,8 @@
 }
 
 .prize-image {
-  max-width: 90%;
+  max-width: 100%;
   height: auto;
-  // border-radius: 2rem;
-  // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .prize-title {
@@ -95,14 +403,66 @@
   margin-bottom: 0.5rem;
   font-weight: bold;
 }
+
+.prize-espresso .prize-title {
+  transform: none;
+}
+
+
+
+/* בסיס: שכל הכרטיסים יתיישרו יפה */
+.PrizeCard {
+  width: 100%;
+}
+
+/* תן לתמונה "תקרה" ברורה כדי שלא תברח */
+.prize-image {
+  width: 450px;     /* תתחיל ב-420 ותכוון */
+  max-width: 140%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.prize-title
+
+/* 1st Place – FLIGHT */
+.prize-flight .prize-image {
+  width: 450px;          
+}
+.prize-flight {
+  transform: translateY(0px);  /* תכוון: -20 עד +20 */
+}
+
+/* 2nd Place – WATCH */
+.prize-watch .prize-image {
+  width: 460px;          /* תכוון: 280–360 */
+}
+.prize-watch {
+  transform: translateY(0px);
+}
+
+/* 3rd Place – ESPRESSO */
+.prize-espresso .prize-image {
+  width: 400px;          /* תכוון: 380–480 */
+}
+.prize-espresso {
+  transform: translateY(120px);
+}
+
+
+
 .biztec-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  margin-top: 3rem;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
   flex-wrap: wrap;
   text-align: left;
+  width: 100%;
+  padding-top: 2rem;
+  border-top: 2px solid rgba(45, 37, 79, 0.15);
 }
 
 .biztec-text {

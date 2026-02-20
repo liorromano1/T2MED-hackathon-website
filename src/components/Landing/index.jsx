@@ -1,4 +1,4 @@
-import {TOP_SECTION} from '../../Module/General';
+import { TOP_SECTION } from '../../Module/General';
 import MytypedComponent from '../Typed/index.js';
 import './style.css';
 
@@ -28,7 +28,18 @@ const Myinfo = () => {
   return (
     <div className="Myinfo">
       <About />
-      <p> {TOP_SECTION.SHORT_DESCRIPTION}</p>
+      <div className="hero-cta-wrapper">
+        <p className="hero-description"> {TOP_SECTION.SHORT_DESCRIPTION}</p>
+        <div className="hero-register">
+          <a 
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeUXH1IZGwiqGO4W2LiR1c2Ch6i-gjGyfDT-2UmTTnIeHjyfA/viewform?usp=dialog"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <Btn class="sponsor_btn" type="Register Now" overlay="Join T2MED 2026" />
+          </a>
+        </div>
+      </div>
       {/* <div className="join_dis">
         <a rel="noreferrer" target="_blank" href={SOCIALS.discord}>
           <Btn
@@ -42,7 +53,7 @@ const Myinfo = () => {
       {/* <div className="buttom-group">
         <a href={TOP_SECTION.HACKERS_REGISTRATION_FORM_LINK}>
           {' '}
-          <Btn class="sponsor_btn" type="Register" overlay="Join T2MED 2025" />
+          <Btn class="sponsor_btn" type="Register" overlay="Join T2MED 2026" />
         </a>
 
         {/* <a href={TOP_SECTION.HACKERS_REGISTRATION_FORM_LINK}>
@@ -50,7 +61,7 @@ const Myinfo = () => {
           <Btn
             class="register"
             type="Register "
-            overlay="Join T2MED 2025"
+            overlay="Join T2MED 2026"
           />
         </a> */}
       {/* </div> */}
@@ -58,4 +69,5 @@ const Myinfo = () => {
   );
 };
 
-export {Btn, Myinfo};
+export { Btn, Myinfo };
+

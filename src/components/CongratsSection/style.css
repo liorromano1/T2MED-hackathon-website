@@ -2,9 +2,10 @@
 .congrats-section {
   margin: 6vh auto 4vh auto;
   padding: 4vh 2vw;
-  background: linear-gradient(100deg, #b1f2de 60%, #fbc7d4 100%);
+  background: linear-gradient(100deg, #F0E6D2 60%, #FDE8E0 100%);
   border-radius: 24px;
-  box-shadow: 0 8px 32px rgba(87, 223, 183, 0.18);
+  border-top: 4px solid #D4A017;
+  box-shadow: 0 8px 32px rgba(212, 160, 23, 0.12);
   text-align: center;
   max-width: 900px;
   position: relative;
@@ -14,7 +15,7 @@
 .congrats-title {
   font-size: 3.5rem;
   font-weight: 800;
-  color: #39a2db;
+  color: #2D254F;
   margin-bottom: 2vh;
   font-family: 'Montserrat', sans-serif;
 }
