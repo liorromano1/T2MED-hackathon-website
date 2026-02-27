@@ -20,7 +20,10 @@ import rticc from './Assets/sponsorsLogos/rticc-logo.png';
 import ami from './Assets/judgei/ami.jpg';
 import avi from './Assets/judgei/avi.jpg';
 // import benny from './Assets/judgei/benny.jpg';
+import adirSommer from './Assets/judgei/adir-sommer.jpeg';
 import Alona from './Assets/judgei/Alona_Matviychuk.jpg';
+import eliezer from './Assets/judgei/eliezer.png';
+import gilBolutin from './Assets/judgei/gil_bolutin.jpg';
 import yaakov from './Assets/judgei/yaakov.jpg';
 import yaron from './Assets/judgei/yaron_shefer.jpg';
 import yona from './Assets/judgei/yona.png';
@@ -32,10 +35,13 @@ import yona from './Assets/judgei/yona.png';
 // Importing all Team members images  from Assets
 
 import adi from './Assets/teami/adi.jpeg';
+import drLior from './Assets/teami/dr-lior.jpeg';
 import Ella from './Assets/teami/Ella.jpeg';
 import LiorRomano from './Assets/teami/Lior.jpg';
 import Mahmud from './Assets/teami/Mahmud_image.jpeg';
 import shahaf from './Assets/teami/Shahaf_image.jpeg';
+import ShaiLee from './Assets/teami/ShaiLee.jpeg';
+import stephanie from './Assets/teami/stephanie.jpeg';
 
 
 // Prize Assets - New format
@@ -47,12 +53,12 @@ import garminImg from './Assets/prizesi/2026prizes/Garmin_VivoActive5.png';
 const TOP_SECTION = {
   TITLE: 'T2MED 2026',
   Typed_effect: [
-    'We are back for 2026! ',
-    'Get ready to innovate and create!',
-    'Registration will be open soon!' //  Registration is now open!
+    'Registration is NOW OPEN!',
+    'Join the 2026 Medical Innovation Hackathon!',
+    'Build. Innovate. Impact.'
   ],
   SHORT_DESCRIPTION:
-    'T2MED 2026 is here! Applications are on there way. Join us to solve real-world clinical challenges and innovate with industry leaders. Secure your spot today!',
+    'T2MED 2026 is here! Registration is now open. Join us to tackle real-world clinical challenges and innovate alongside industry leaders. Secure your spot today!',
   IMG_SRC: boy,
   DISCORD_LINK: '',
   MENTORS_FORM_LINK: '',
@@ -107,14 +113,14 @@ const calenderStartingDate = {
 
 const eventMetadata = {
   title: 'Pre-Hackathon Day',
-  date: 'April 29, 2026',
+  date: 'April 27, 2026',
   time: '16:30 – 20:30',
   location: 'Rambam Health Care Campus'
 };
 
 const schedule = [
   {
-    day: '29-4-2026',
+    day: '27-4-2026',
     events: [
       {
         title: 'Reception & Networking',
@@ -338,6 +344,28 @@ const Prizeinfo = [
 
 const TeamInfo = [
   [
+    //Array 0 - Senior Lead with team
+    {
+      name: 'Stephanie Shneor',
+      role: 'Head of Marketing and Public Relations | Faculty of Medicine',
+      linkedin: '',
+      img: stephanie
+    },
+    {
+      name: 'Dr. Lior Lev Tov',
+      role: 'Founder & Academic Lead, T2MED Hackathon',
+      subtitle: 'Senior Neurosurgeon | Faculty of Medicine',
+      linkedin: '',
+      img: drLior
+    },
+    {
+      name: 'Shai-Lee Cohen',
+      role: 'Events and Media Coordinator | Faculty of Medicine',
+      linkedin: '',
+      img: ShaiLee
+    }
+  ],
+  [
     //Array 1
     {
       name: 'Lior Romano',
@@ -375,25 +403,47 @@ const TeamInfo = [
   ]
 ];
 
+const MentorsInfo = [
+  [
+    //Array 1
+    {
+      name: 'Prof. Gil Bolotin',
+      role: 'Head of the Department of Cardiac Surgery',
+      bio:
+        'Prof. Gil Bolotin is a clinical professor and leading cardiac and thoracic surgeon, currently serving as Head of the Department of Cardiac Surgery at Rambam Health Care Campus. He graduated from the Faculty of Medicine at the Hebrew University of Jerusalem and holds a PhD from Maastricht University in the Netherlands, where his research focused on surgical treatments for heart failure. Prof. Bolotin completed his residency in cardiac and thoracic surgery at Carmel Medical Center in Haifa and advanced fellowships in minimally invasive valve repair and replacement in North Carolina, USA. He further specialized in heart failure surgery, heart transplantation, ventricular assist devices at the University of Chicago, and surgical treatment of atrial fibrillation at Maastricht University.',
+      img: gilBolutin
+    },
+    {
+      name: 'Adir Sommer',
+      role: 'Ophthalmology Resident, Rambam Health Care Campus',
+      bio:
+        'Adir Sommer is an ophthalmology resident at Rambam Health Care Campus with a background in healthcare innovation, product management, and medical research. He focuses on integrating AI and machine learning into healthcare services. Adir previously served as a product manager at Clalit Innovation, working on AI-driven healthcare solutions, and has advised medical device and digital health startups as well as a VC fund on R&D, product-market fit, funding, regulation, and go-to-market strategies. He was named to Forbes\' 30 Under 30 for his impact on medical innovation.',      img: adirSommer
+    }
+  ]
+];
+
 const JudgesInfo = [
   [
     //Array 1
     {
       name: 'Prof. Ami Aronheim',
       role: 'Dean, Ruth & Bruce Rappaport Faculty of Medicine, Technion',
-      bio: 'Prof. Ami Aronheim is a leading molecular genetics researcher specializing in protein-protein interactions and signal transduction. With a Ph.D. in Biochemistry from the Weizmann Institute and postdoctoral training at UC San Diego, he established his laboratory in the Faculty of Medicine at the Technion in 1996, has published over 70 articles, and holds five patents. His work explores cancer-cardiac interactions, shedding light on disease progression. A longtime faculty member at the Technion, he previously served as Senior Vice Dean and, since 2023, has been the Dean of the Faculty of Medicine.',
+      bio:
+        'Prof. Ami Aronheim is a leading molecular genetics researcher specializing in protein-protein interactions and signal transduction. With a Ph.D. in Biochemistry from the Weizmann Institute and postdoctoral training at UC San Diego, he established his laboratory in the Faculty of Medicine at the Technion in 1996, has published over 70 articles, and holds five patents. His work explores cancer-cardiac interactions, shedding light on disease progression. A longtime faculty member at the Technion, he previously served as Senior Vice Dean and, since 2023, has been the Dean of the Faculty of Medicine.',
       img: ami
     },
     {
       name: 'Dr. Avi Goldberg',
       role: 'CEO, Carmel Medical Center',
-      bio: 'Dr. Avi Goldberg is a senior healthcare executive with extensive experience in hospital leadership, and health system management. He serves as CEO of Carmel medical center Since 2015, following his term as CEO of Yoseftal Hospital in Eilat. With an MPA from Harvard and an MHA from Ben-Gurion University, he specializes in strategic healthcare management and crisis response. He also lectures on healthcare management at the Technion and serves on Israel’s National Health Council.',
+      bio:
+        'Dr. Avi Goldberg is a senior healthcare executive with extensive experience in hospital leadership, and health system management. He serves as CEO of Carmel medical center since 2015, following his term as CEO of Yoseftal Hospital in Eilat. With an MPA from Harvard and an MHA from Ben-Gurion University, he specializes in strategic healthcare management and crisis response. He also lectures on healthcare management at the Technion and serves on Israel\'s National Health Council.',
       img: avi
     },
     {
       name: 'Dr. Alona Matviychuk',
       role: 'Deputy Director of Emek Medical Center',
-      bio: 'Dr. Alona Matviychuk is a senior healthcare executive and medical leader, currently serving as Deputy Director of Emek Medical Center. She is an internal medicine specialist with extensive experience in hospital management, clinical operations, and healthcare system leadership. Dr.Matviychuk holds an MHA in Health Systems Management and, in her current role, promotes organization-wide quality processes, as well as strategic initiatives in patient care quality, operational efficiency, and organizational development within large medical centers. ',
+      bio:
+        'Dr. Alona Matviychuk is a senior healthcare executive and medical leader, currently serving as Deputy Director of Emek Medical Center. She is an internal medicine specialist with extensive experience in hospital management, clinical operations, and healthcare system leadership. Dr. Matviychuk holds an MHA in Health Systems Management and, in her current role, promotes organization-wide quality processes, as well as strategic initiatives in patient care quality, operational efficiency, and organizational development within large medical centers.',
       img: Alona
     }
   ],
@@ -402,53 +452,32 @@ const JudgesInfo = [
     {
       name: 'Yaron Sheffer',
       role: 'Strategic & Innovation Director, Emek Medical Center',
-      bio: 'A visionary leader with over 18 years of experience in healthcare innovation, strategic planning, and operational management. As Director of Strategy & Innovation at Emek Medical Center, he drives international partnerships, entrepreneurship, and hospital growth initiatives. Previously, he managed healthcare operations for Maccabi, overseeing large-scale medical teams and multimillion-dollar budgets. Passionate about digital health, he mentors startups and leads executive training programs. With a background in military medical training and an MBA in Nonprofit Management, he blends leadership, strategy, and hands-on execution to transform healthcare systems',
+      bio:
+        'A visionary leader with over 18 years of experience in healthcare innovation, strategic planning, and operational management. As Director of Strategy & Innovation at Emek Medical Center, he drives international partnerships, entrepreneurship, and hospital growth initiatives. Previously, he managed healthcare operations for Maccabi, overseeing large-scale medical teams and multimillion-dollar budgets. Passionate about digital health, he mentors startups and leads executive training programs. With a background in military medical training and an MBA in Nonprofit Management, he blends leadership, strategy, and hands-on execution to transform healthcare systems.',
       img: yaron
     },
     {
       name: 'Yaakov Diminsky',
       role: 'CEO at Road2',
-      bio: 'Yaakov Diminsky holds an MSc in Biomedical Engineering and an MBA from the Technion. He specializes in developing business and technological strategies for early-stage startups. Yaakov has a background in leading R&D for technologies that combine bio-sensing with artificial intelligence. He also lectures on business and technological development in the deep-tech field as part of startup acceleration programs.',
+      bio:
+        'Yaakov Diminsky holds an MSc in Biomedical Engineering and an MBA from the Technion. He specializes in developing business and technological strategies for early-stage startups. Yaakov has a background in leading R&D for technologies that combine bio-sensing with artificial intelligence. He also lectures on business and technological development in the deep-tech field as part of startup acceleration programs.',
       img: yaakov
     },
     {
       name: 'Dr. Yona Vaisbuch',
       role: 'Ear & Skull Base Surgeon | Deputy Director, ENT & Surgical Division, Rambam | Head of Transformation | President, Biodesign Israel',
-      bio: 'Dr. Yona Vaisbuch - Biodesign Israel founder and president. Dr. Vaisbuch is a graduate of the Sackler Faculty of Medicine at Tel Aviv University, Dr Vaisbuch specialized in otorhinolaryngology (ear, nose and throat medicine) at the Rabin Medical Center and underwent advanced training for ear and skull base surgery at Stanford University in California. He currently serves as a guest professor at Stanford and a specialist physician at Rambam Medical Center. He is the founder and former chairman of Mirsham, the Medical Interns’ Organization and a member of the Taub Center’s Health Committee. In addition, Dr. Vaisbuch serves as a medical advisor for medical startups and is a founding partner in a few medical ventures.',
+      bio:
+        'Dr. Yona Vaisbuch - Biodesign Israel founder and president. Dr. Vaisbuch is a graduate of the Sackler Faculty of Medicine at Tel Aviv University, Dr. Vaisbuch specialized in otorhinolaryngology (ear, nose and throat medicine) at the Rabin Medical Center and underwent advanced training for ear and skull base surgery at Stanford University in California. He currently serves as a guest professor at Stanford and a specialist physician at Rambam Medical Center. He is the founder and former chairman of Mirsham, the Medical Interns\' Organization and a member of the Taub Center\'s Health Committee. In addition, Dr. Vaisbuch serves as a medical advisor for medical startups and is a founding partner in a few medical ventures.',
       img: yona
+    },
+    {
+      name: 'Prof. Eliezer Shalev',
+      role: 'President, Tel-Hai University Kiryat Shmona | Expert in Obstetrics & Gynecology',
+      bio:
+        'Prof. Eliezer Shalev is a pioneering researcher and leader in obstetrics, gynecology, and fetal medicine. He previously headed the Ultrasound Unit at Sheba Medical Center (1988) and led the Women & Maternity Division at HaEmek Medical Center (1989–2016). He served as Dean of the Technion Faculty of Medicine (2011–2016) and later as Executive Pro-Vice-Chancellor and Vice-Chancellor at Technion\'s Guangdong campus in China. Since 2022, he has been President of Tel-Hai University Kiryat Shmona in the Galilee, leading its academic expansion. A recipient of the 2017 Lifetime Achievement Award in Medicine, he continues to pioneer research in childbirth and fertility. He is also the founder of the T2MED Hackathon, driving medical innovation.',
+      img: eliezer
     }
-  ],
-  // [
-  //   //Array 3
-  //   {
-  //     name: 'Nissan Elimelech',
-  //     role: "Medtech serial entrepreneur, Augmedics' Founder & ex-CEO",
-  //     bio: 'Nissan is a serial entrepreneur with two decades’ experience in various medical device markets and the inventor of 15 patents. He founded Augmedics, a MedTech company which develops and commercializes the xvision™ – The first Augmented-Reality Guidance System for spine surgery. Nissan served the company as its CEO for more than 7 years, raised $63m from top-tier US VCs, and led it from inception to a multi-million-dollar revenue organization with a full-scale US nationwide commercial team. Prior to Augmedics, he worked in Medtronic at the spine surgery unit, and in Neopharm at the general surgery unit. In addition, he co-founded and was the inventor of another medical device start-up, Medizn, which developed a smart surgical hernia mesh. Nissan is a Biomedical engineer and MBA graduate.',
-  //     img: nissan
-  //   },
-  //   {
-  //     name: 'Ronya Rubinstein',
-  //     role: 'Entrepreneur, Endospot Founder & CEO',
-  //     bio: 'Ronya Rubinstein is an entrepreneur with a passion for navigating the intersections of science, business, regulations, ethics, patents, legal,  reimbursement and people. Formerly, director of the R&D unit at Rambam hospital, Ronya has vast expertise in clinical trials, technology transfer and digital health, held various board positions including at Mego-Afkek and MindUp incubator. Ronya also serves as the head of the health and gender committee at the National Committee for advancing Women in Science.',
-  //     img: ronya
-  //   },
-  //   {
-  //     name: 'Prof. Eliezer Shalev',
-  //     role: 'President, Tel-Hai Academic College | Expert in Obstetrics & Gynecology',
-  //     bio: 'Prof. Eliezer Shalev is a groundbreaking researcher and leader in obstetrics, gynecology, and fetal medicine, formerly heading the Ultrasound Unit at Sheba Medical Center (1988) And the Women & Maternity Division at HaEmek Medical Center (1989-2016). He served as Dean of the Technion Faculty of Medicine (2011–2016) and later Executive Pro-vice chancellor & Vice-Chancellor at Technion’s Guangdong campus in China. Since 2022, he has been President of Tel-Hai Academic College, leading its transition into the University of the Galilee. A recipient of the 2017 Lifetime Achievement Award in Medicine, he continues to pioneer research in childbirth and fertility. He is also the founder of the T2MED Hackathon, driving medical innovation.',
-  //     img: eliezer
-  //   },
-  // ],
-  // [
-  //   //Array 4
-
-  //   {
-  //     name: 'Hadas Shachaf',
-  //     role: 'Director of Pharmaceutical Services, Bnai Zion Medical Center',
-  //     bio: 'Hadas Shachaf is the Director of Pharmacy Services at Bnei Zion Medical Center in Haifa. She focuses on improving medication safety and operational efficiency through pharmacy automation and cross-sector collaboration. In recent years, she has helped implement a centralized Unit Dose system and supported national and academic research on drug shortages and inventory management. Her work aims to combine innovation with practical solutions for public hospital settings.',
-  //     img: hadas
-  //   }
-  // ]
+  ]
 ];
 
 /** Instructions
@@ -488,7 +517,7 @@ const frequentlyAskedQuestions = [
       {
         label: 'Do I need a team to register?',
         content:
-          'No, you can register individually and form a team at the orientation meeting on 29 April 2026.'
+          'No, you can register individually and form a team at the orientation meeting on 27 April 2026.'
       },
       {
         label: 'What will we do during the hackathon?',
@@ -534,6 +563,7 @@ export {
   FOOTER,
   frequentlyAskedQuestions,
   JudgesInfo,
+  MentorsInfo,
   MIDDLE_SECTION,
   Prizeinfo,
   schedule,

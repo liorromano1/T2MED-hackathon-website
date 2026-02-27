@@ -22,13 +22,15 @@
 }
 
 .prize-card-container.prize-espresso .prize-label-above {
-  transform: translateY(143px);
+  /* Removed: transform: translateY(143px) - making label flow naturally */
+  order: -1;  /* Position label above card naturally via flexbox */
+  margin-bottom: clamp(6px, 2vw, 12px);  /* Responsive spacing instead of hardcoded translate */
 }
 
 .prize-card-wrapper {
   width: 100%;
   position: relative;
-  min-height: 520px;
+  min-height: 320px;
   display: flex;
   align-items: flex-end;
 }
@@ -254,12 +256,18 @@
 }
 
 .prize-espresso .prize-card-image {
-  transform: scale(1.6);
+  /* Removed: transform: scale(1.6) - using responsive clamp() instead */
+  /* Desktop: scale(1.6), Tablet: 1.4, Mobile: 1.1 */
+  transform: scale(clamp(1.1, 1.6, 1.8));
   max-width: 100%;
+  object-fit: contain;
 }
 
 .prize-espresso .prize-label-below {
-  transform: translateY(120px);
+  /* Removed: transform: translateY(120px) - making label flow naturally */
+  /* Responsive margin instead of hardcoded transform */
+  margin-top: clamp(6px, 2vw, 12px);
+  order: 1;  /* Position label below card naturally via flexbox */
 }
 
 // ==================== Row & Grid Layout ====================
@@ -282,9 +290,14 @@
   justify-content: center;
 }
 
+/* 
+  REMOVED MASSIVE HACK: margin-bottom: 360px
+  Now using flexbox alignment-self: flex-end for proper desktop alignment
+  and responsive flexbox on mobile without hardcoded offsets
+*/
 .prize-responsive-col.prize-espresso {
   align-self: flex-end;
-  margin-bottom: 360px;
+  /* Desktop: align to flex-end (bottom). Mobile: removed via @media */
 }
 
 @media (max-width: 1200px) {
@@ -297,7 +310,47 @@
   }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 980px) {
+  .prize-row {
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 2rem;
+    /* Removed overflow-x: hidden - using global clipping instead to allow 3D pop-out effect */
+  }
+  
+  .prize-responsive-col {
+    flex: 0 0 calc(50% - 1rem);
+    max-width: 100%;
+  }
+  
+  /* Reset espresso alignment for tablet */
+  .prize-responsive-col.prize-espresso {
+    align-self: center;  /* Center on tablet instead of bottom align */
+  }
+}
+
+@media (max-width: 768px) {
+  .prize-row {
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /* Removed overflow-x: hidden - using global clipping instead to allow 3D pop-out effect */
+  }
+  
+  .prize-responsive-col {
+    flex: 0 0 100%;
+    max-width: 300px;
+  }
+
+  /* Reset espresso alignment for mobile */
+  .prize-responsive-col.prize-espresso {
+    align-self: center;  /* Center on mobile - no more margin-bottom hack! */
+  }
+}
+
+@media (max-width: 980px) {
   .prize-row {
     flex-wrap: wrap;
     align-items: stretch;
@@ -408,48 +461,9 @@
   transform: none;
 }
 
-
-
-/* בסיס: שכל הכרטיסים יתיישרו יפה */
-.PrizeCard {
-  width: 100%;
-}
-
-/* תן לתמונה "תקרה" ברורה כדי שלא תברח */
-.prize-image {
-  width: 450px;     /* תתחיל ב-420 ותכוון */
-  max-width: 140%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-.prize-title
-
-/* 1st Place – FLIGHT */
-.prize-flight .prize-image {
-  width: 450px;          
-}
-.prize-flight {
-  transform: translateY(0px);  /* תכוון: -20 עד +20 */
-}
-
-/* 2nd Place – WATCH */
-.prize-watch .prize-image {
-  width: 460px;          /* תכוון: 280–360 */
-}
-.prize-watch {
-  transform: translateY(0px);
-}
-
-/* 3rd Place – ESPRESSO */
-.prize-espresso .prize-image {
-  width: 400px;          /* תכוון: 380–480 */
-}
-.prize-espresso {
-  transform: translateY(120px);
-}
-
-
+/* ==================== Legacy/Unused Styles (Deprecated) ==================== */
+/* The following old .prize-image rules are deprecated and not used by the refactored component.
+   They are kept for reference only. Do not use. */
 
 .biztec-wrapper {
   display: flex;

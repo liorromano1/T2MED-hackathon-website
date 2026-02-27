@@ -12,6 +12,7 @@
     font-weight: 300;
     margin: 0;
     text-align: left;
+    color: white;
 }
 
 @media  (max-width: 570px){

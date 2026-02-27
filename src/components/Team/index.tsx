@@ -20,7 +20,7 @@ const JoinTeam: React.FC<IJoinTeam> = ({placeholder, formLink, content}) => {
 };
 
 const Member = ({ info }: { info: any }) => {
-  const { role, name, img, linkedin, bio } = info;
+  const { role, name, img, linkedin, bio, subtitle } = info;
 
   return (
     <div className="member">
@@ -34,6 +34,10 @@ const Member = ({ info }: { info: any }) => {
 
       <h3>{name}</h3>
       <p className="role">{role}</p>
+      
+      {subtitle && (
+        <p className="member-subtitle">{subtitle}</p>
+      )}
 
       {bio && (
         <div className="bio-box">

@@ -22,6 +22,7 @@ import biztec from '../../Module/Assets/biztec_1.png';
 import {
   frequentlyAskedQuestions,
   JudgesInfo,
+  MentorsInfo,
   Prizeinfo,
   sponsorLogos,
   TeamInfo
@@ -90,69 +91,65 @@ const FrequentlyAsked = (props, index) => {
 };
 
 const TracksSection = () => {
-  const [activeTrackId, setActiveTrackId] = useState('diagnostics');
+  const [activeTrackId, setActiveTrackId] = useState('screen-detect');
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   const tracks = [
-    {
-      id: 'diagnostics',
-      title: 'Diagnostics & Early Detection',
-      hero: 'From data to detection.',
-      teaser: 'Smarter screening and earlier diagnosis.',
-      description:
-        'Design technologies that identify disease earlier and more accurately — from AI-powered screening to home-based monitoring solutions.',
-      bullets: [
-        'Early signal detection',
-        'Non-invasive screening',
-        'Computer vision & medical imaging',
-        'Accessible diagnostics beyond hospitals'
-      ]
-    },
-    {
-      id: 'surgical',
-      title: 'Surgical Innovation',
-      hero: 'Precision under pressure.',
-      teaser: 'Safer, smarter operating rooms.',
-      description:
-        'Reimagine the operating room with smarter tools, real-time guidance, and technologies that reduce complications and enhance surgical performance.',
-      bullets: [
-        'AI-assisted guidance',
-        'Smart OR workflow',
-        'Robotic & interventional systems',
-        'Safety & infection prevention'
-      ]
-    },
-    {
-      id: 'emergency',
-      title: 'Emergency Medicine',
-      hero: 'Innovation in the first critical minutes.',
-      teaser: 'Real-time care from field to trauma room.',
-      description:
-        'Develop solutions for emergency care — from the field to the ambulance to the trauma room — built to perform under pressure and uncertainty.',
-      bullets: [
-        'Portable diagnostics',
-        'Smart triage systems',
-        'Ambulance-to-hospital data flow',
-        'Wearable monitoring'
-      ]
-    },
-    {
-      id: 'management',
-      title: 'Healthcare Management & Logistics',
-      hero: 'Fix the bottlenecks. Free the clinicians.',
-      teaser: 'Operational innovation that improves flow.',
-      description:
-        'Engineer smarter healthcare systems by optimizing scheduling, logistics, data flow, and operational decision-making.',
-      bullets: [
-        'Dynamic prioritization',
-        'Patient flow optimization',
-        'Documentation automation',
-        'Resource utilization'
-      ]
-    }
-  ];
+  {
+    id: 'screen-detect',
+    title: 'Screen & Detect',
+    hero: 'Diagnostics and Early Detection',
+    teaser: 'Smarter screening and earlier diagnosis.',
+    description: 'Breakthroughs in diagnostics, monitoring & early detection',
+    bullets: [
+      'Early signal detection',
+      'Non-invasive screening',
+      'Computer vision & medical imaging',
+      'Accessible diagnostics beyond hospitals'
+    ]
+  },
+  {
+    id: 'future-or',
+    title: 'The Future O.R.',
+    hero: 'The Future Operating Room',
+    teaser: 'Precision under pressure.',
+    description: 'Smarter operating rooms and safer surgical journeys',
+    bullets: [
+      'AI-assisted intra-op guidance',
+      'Smart OR workflow & checklists',
+      'Robotic & interventional systems',
+      'Safety & infection prevention'
+    ]
+  },
+  {
+    id: 'extreme-clinical-care',
+    title: 'Extreme Clinical Care',
+    hero: 'Field and Emergency Medicine',
+    teaser: 'Innovation in the first critical minutes.',
+    description: 'Tools for care under uncertainty and extreme conditions',
+    bullets: [
+      'Triage, monitoring & decision support',
+      'Patient ID & rapid documentation',
+      'Evacuation and continuity of care',
+      'Mass casualty & disaster readiness'
+    ]
+  },
+  {
+    id: 'health-ops-system-mgmt',
+    title: 'Health Operations & System Management',
+    hero: 'Managing healthcare systems',
+    teaser: 'Fix the bottlenecks. Free the clinicians.',
+    description: 'Optimizing healthcare flow, resources, and operations',
+    bullets: [
+      'ER load and bed capacity optimization',
+      'Surgical queue & scheduling tools',
+      'Reduce admin burden and burnout',
+      'Data sync across clinics & hospitals'
+    ]
+  }
+];
 
-  const activeTrack = tracks.find((t) => t.id === activeTrackId);
+  const activeTrack = tracks.find((t) => t.id === activeTrackId) || tracks[0];
 
   const handleTrackSelect = (trackId) => {
     if (trackId !== activeTrackId) {
@@ -171,7 +168,7 @@ const TracksSection = () => {
       <div className="tracks-intro">
         <p className="tracks-intro-title">Choose Your Track</p>
         <p className="tracks-intro-text">
-          This year we are introducing Tracks to focus the most impactful
+          <span className="text-emphasis">This year</span> we are introducing Tracks to focus the most impactful
           healthcare challenges into four areas. Each team selects one track and
           is judged within it first, then the top teams from every track advance
           to the Grand Finale where overall winners are chosen.
@@ -324,6 +321,7 @@ export default function HomePage() {
         {JudgesInfo.map(TeamMembers)}
 
         <h1 id="mentors">Our Mentors</h1>
+        {MentorsInfo.map(TeamMembers)}
         {/* {FOOTER.JOIN_TEAM.required && (
           <div className="mentor-section">
             <JoinTeam

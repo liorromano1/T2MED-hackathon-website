@@ -53,11 +53,25 @@ img.square {       /* Hillel logo */
   transform: scale(1.75);
 }
 
+.member-img.member-img.member-profeliezershalev {
+  object-position: 50% 10%;
+  transform: scale(1.0);
+}
+
 .member-img.member-dralonamatviychuk {
   object-position: 70% 10%;
   transform: scale(1.3);
 }
 
+.member-img.member-profgilbolotin {
+  object-position: 40% 60%;
+  transform: scale(1.0);
+}
+
+.member-img.member-profeliezershalev {
+  object-position: 50% 20%;
+  transform: scale(1.0);
+}
 
 /*focus for team members*/
 .member-img.member-liorromano {
@@ -84,18 +98,40 @@ img.square {       /* Hillel logo */
   transform: scale(1.50);
 }
 
+.member-img.member-stephanieshneor {
+  object-position: 50% 15%;
+  transform: scale(1.0);
+}
+
+.member-img.member-drliorlevtov {
+  object-position: 50% 20%;
+  transform: scale(1.0);
+}
+
 h3 {
-  font-size: 2.8rem;
+  font-size: clamp(1.6rem, 5vw, 2.8rem);
   color: #222;
   margin-top: 1rem;
   font-weight: 600;
+  line-height: 1.3;
 }
 
 .role {
-  font-size: 1.8rem;
+  font-size: clamp(1.0rem, 3.5vw, 1.8rem);
   color: #444;
   margin-bottom: 1rem;
   font-weight: medium;
+  line-height: 1.4;
+}
+
+.member-subtitle {
+  font-size: clamp(1.0rem, 3.2vw, 1.8rem);
+  color: #666;
+  margin-top: -0.8rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  opacity: 0.9;
+  line-height: 1.4;
 }
 
 /* Initially hidden bio box */
@@ -146,14 +182,6 @@ h3 {
   .member img {
     width: 20rem;
     height: 20rem;
-  }
-
-  h3 {
-    font-size: 1.8rem;
-  }
-
-  .role {
-    font-size: 1.3rem;
   }
 
   .bio-box {

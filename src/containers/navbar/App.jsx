@@ -113,6 +113,11 @@ const NAVBAR = props => {
                 </Link>
               </li>
               <li>
+                <Link to={`#tracks`}>
+                  <span className="links">Tracks</span>
+                </Link>
+              </li>
+              <li>
                 <Link to={`#prizes`}>
                   <span className="links">Prizes</span>
                 </Link>
