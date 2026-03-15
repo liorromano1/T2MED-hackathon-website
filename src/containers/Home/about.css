@@ -52,6 +52,12 @@ h1 {
   color: #2D254F;
 }
 
+.section-title {
+  text-align: center;
+  font-size: 5rem;
+  color: #2D254F;
+}
+
 h2 {
   color: #2D254F;
 }
@@ -66,6 +72,10 @@ a:hover {
 }
 .Row {
   text-align: center;
+}
+
+.Row.info {
+  text-align: left;
 }
 
 .info {
@@ -92,6 +102,18 @@ a:hover {
 }
 .members {
   padding: 0vh 10vh 0 10vh;
+}
+
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 2.4rem;
+  row-gap: 0;
+  align-items: start;
+}
+
+.members-grid-item {
+  min-width: 0;
 }
 
 
@@ -160,6 +182,28 @@ a:hover {
   margin: 0;
   font-size: 17px;
   color: #666666;
+}
+
+.tracks-details-button {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 10px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #2D254F;
+  background-color: transparent;
+  border: 2px solid #D4A017;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.tracks-details-button:hover {
+  background-color: #D4A017;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 160, 23, 0.3);
 }
 
 .text-emphasis {
@@ -378,6 +422,11 @@ a:hover {
     padding: 0;
   }
 
+  .members-grid {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+  }
+
   .sponsorSection {
     padding: 0;
     margin: 0;
@@ -388,4 +437,10 @@ a:hover {
     padding: 20vh 0vh 0 0vh;
   }
 
+}
+
+@media (max-width: 1200px) and (min-width: 571px) {
+  .members-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }

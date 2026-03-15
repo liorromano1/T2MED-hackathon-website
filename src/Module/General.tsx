@@ -1,4 +1,4 @@
-import hackathonLogo from './Assets/hackathonLogo_circle.jpeg';
+import hackathonLogo from './Assets/hackathonLogo_2026.png';
 
 // Importing all sponsors logos from Assets
 /** Put all your Team member image inside folder `Team Images`
@@ -20,6 +20,7 @@ import rticc from './Assets/sponsorsLogos/rticc-logo.png';
 import ami from './Assets/judgei/ami.jpg';
 import avi from './Assets/judgei/avi.jpg';
 // import benny from './Assets/judgei/benny.jpg';
+import abrahamPeled from './Assets/judgei/abraham_peled.jpeg';
 import adirSommer from './Assets/judgei/adir-sommer.jpeg';
 import Alona from './Assets/judgei/Alona_Matviychuk.jpg';
 import eliezer from './Assets/judgei/eliezer.png';
@@ -71,6 +72,18 @@ const SOCIALS = {
   facebook: 'https://www.facebook.com/t2med3ds/',
   email: 'mailto:t2medtechnion@gmail.com',
   mail: 't2medtechnion@gmail.com'
+};
+
+const sponsorLinks = {
+  bneyzion100:
+    'https://www.gov.il/he/departments/b-zion-health-center/govil-landing-page',
+  carmel: 'https://hospitals.clalit.co.il/carmel/en/Pages/default.aspx',
+  haemek: 'https://hospitals.clalit.co.il/emek/en/Pages/default.aspx',
+  hhi: 'https://thhi.net.technion.ac.il/',
+  hililyafe: 'https://hymc.org.il/eng/',
+  rambam: 'https://www.rambam.org.il/en/',
+  rappaport: 'https://md.technion.ac.il/',
+  rticc: 'https://rticc.net.technion.ac.il/'
 };
 
 const MIDDLE_SECTION = {
@@ -414,10 +427,18 @@ const MentorsInfo = [
       img: gilBolutin
     },
     {
-      name: 'Adir Sommer',
+      name: 'Dr. Adir Sommer',
       role: 'Ophthalmology Resident, Rambam Health Care Campus',
       bio:
-        'Adir Sommer is an ophthalmology resident at Rambam Health Care Campus with a background in healthcare innovation, product management, and medical research. He focuses on integrating AI and machine learning into healthcare services. Adir previously served as a product manager at Clalit Innovation, working on AI-driven healthcare solutions, and has advised medical device and digital health startups as well as a VC fund on R&D, product-market fit, funding, regulation, and go-to-market strategies. He was named to Forbes\' 30 Under 30 for his impact on medical innovation.',      img: adirSommer
+        'dr.Adir Sommer is an ophthalmology resident at Rambam Health Care Campus with a background in healthcare innovation, product management, and medical research. He focuses on integrating AI and machine learning into healthcare services. Adir previously served as a product manager at Clalit Innovation, working on AI-driven healthcare solutions, and has advised medical device and digital health startups as well as a VC fund on R&D, product-market fit, funding, regulation, and go-to-market strategies. He was named to Forbes\' 30 Under 30 for his impact on medical innovation.',  
+      img: adirSommer
+    },
+    {
+      name: 'Dr. Abraham Peled',
+      role: 'Psychiatrist | Emeritus Clinical Faculty, Technion Faculty of Medicine',
+      bio:
+        'Dr. Abraham Peled is a psychiatrist with many years of clinical experience, having chaired various departments from open ward rehabilitation to top-security severely psychotic confined patients\' wards. He held an Emeritus clinical position in the Medical Faculty of the Technion (Israel Institute of Technology) and was a fellow post-doc at UCDMC California in his early career. Uniquely, Dr. Peled was self-trained in the sciences of Computational Neuroscience and Complex Systems Physics, searching relentlessly to unite them with phenomenological psychiatry. Dr. Peled believes that unifying psychiatry with Computational Neuroscience and Complex Systems Physics will revolutionize the field of mental disorders and ensure effective cures to those suffering.',
+      img: abrahamPeled
     }
   ]
 ];
@@ -487,10 +508,20 @@ const JudgesInfo = [
  */
 
 const sponsorLogos = [
-  [{src: carmel}, {src: haemek}, {src: hililyafe}], //Array 1
-  [{src: rambam}, {src: rappaport}, {src: rticc}], //Array 2
-  [{src: hhi}, {src: bneyzion100}], //Array 3
-  [] //Array 3
+  [
+    {id: 'carmel', name: 'Carmel Medical Center', src: carmel, href: sponsorLinks.carmel},
+    {id: 'haemek', name: 'HaEmek Medical Center', src: haemek, href: sponsorLinks.haemek},
+    {id: 'hililyafe', name: 'Hillel Yaffe Medical Center', src: hililyafe, href: sponsorLinks.hililyafe}
+  ], //Array 1
+  [
+    {id: 'rambam', name: 'Rambam Health Care Campus', src: rambam, href: sponsorLinks.rambam},
+    {id: 'rappaport', name: 'Technion Faculty of Medicine', src: rappaport, href: sponsorLinks.rappaport},
+    {id: 'rticc', name: 'Ruth and Bruce Rappaport Cancer Research Center', src: rticc, href: sponsorLinks.rticc}
+  ], //Array 2
+  [
+    {id: 'hhi', name: 'Human Health Initiative', src: hhi, href: sponsorLinks.hhi},
+    {id: 'bneyzion100', name: 'Bnei Zion Medical Center', src: bneyzion100, href: sponsorLinks.bneyzion100}
+  ] //Array 3
 ];
 
 /** Instructions
@@ -567,9 +598,7 @@ export {
   MIDDLE_SECTION,
   Prizeinfo,
   schedule,
-  SOCIALS,
-  sponsorLogos,
-  TeamInfo,
+  SOCIALS, sponsorLinks, sponsorLogos, TeamInfo,
   TOP_SECTION
 };
 

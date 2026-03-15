@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
-import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Switch, useLocation } from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
 import styled from 'styled-components';
 import technion_medicine_logo from '../../Module/Assets/sponsorsLogos/medicine.png';
 import HomePage from '../Home/HomePage';
+import TracksDetails from '../TracksDetails/TracksDetails';
 import logoClose from './assets/ham-c.svg';
 import hamLogo from './assets/ham.svg';
 import './styles.scss';
@@ -95,80 +96,103 @@ const NAVBAR = props => {
 
   return (
     <Router>
-      {/* Mobile logo, always visible */}
-      <img className="mobile-logo" src={technion_medicine_logo} alt="Company Logo" />
+      <AppContent 
+        toggle={toggle}
+        setToggle={setToggle}
+        isOffset={isOffset}
+        navigation={navigation}
+      />
+    </Router>
+  );
+};
 
-      <nav className={`nav_bar ${isOffset && 'nav_bar-offset-crossed'}`}>
-        <Wrapper toggle={toggle}>
-          <div className="nav-content" ref={navigation}>
-            <ul>
-              <li>
-                <Link to={`#home`}>
-                  <span className="links">Home</span>
-                </Link>
-              </li>
-              <li>
-                <Link to={`#faq`}>
-                  <span className="links">FAQ</span>
-                </Link>
-              </li>
-              <li>
-                <Link to={`#tracks`}>
-                  <span className="links">Tracks</span>
-                </Link>
-              </li>
-              <li>
-                <Link to={`#prizes`}>
-                  <span className="links">Prizes</span>
-                </Link>
-              </li>
-              <li>
-                <Link to={`#sponsors`}>
-                  <span className="links">Sponsors</span>
-                </Link>
-              </li>
-              <li>
-                <Link to={`#judges`}>
-                  <span className="links">Judges</span>
-                </Link>
-              </li>
-              <li>
-                <Link to={`#team`}>
-                  <span className="links">Team</span>
-                </Link>
-              </li>
-              <img
-                className="s-close"
-                onClick={() => setToggle(true)}
-                src={logoClose}
-                alt="Close menu"
-              />
-            </ul>
+const AppContent = ({ toggle, setToggle, isOffset, navigation }) => {
+  const location = useLocation();
+  const hideNavbar = location.pathname === '/tracks-details';
+
+  return (
+    <>
+      {!hideNavbar && (
+        <>
+          {/* Mobile logo, always visible */}
+          <img className="mobile-logo" src={technion_medicine_logo} alt="Company Logo" />
+
+          <nav className={`nav_bar ${isOffset && 'nav_bar-offset-crossed'}`}>
+            <Wrapper toggle={toggle}>
+              <div className="nav-content" ref={navigation}>
+                <ul>
+                  <li>
+                    <Link to={`#home`}>
+                      <span className="links">Home</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={`#faq`}>
+                      <span className="links">FAQ</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={`#tracks`}>
+                      <span className="links">Tracks</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={`#prizes`}>
+                      <span className="links">Prizes</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={`#sponsors`}>
+                      <span className="links">Sponsors</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={`#judges`}>
+                      <span className="links">Judges</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={`#team`}>
+                      <span className="links">Team</span>
+                    </Link>
+                  </li>
+                  <img
+                    className="s-close"
+                    onClick={() => setToggle(true)}
+                    src={logoClose}
+                    alt="Close menu"
+                  />
+                </ul>
+                <img
+                  className="company-logo"
+                  src={technion_medicine_logo}
+                  alt="Company Logo"
+                />
+              </div>
+              <div className="ease" />
+            </Wrapper>
             <img
-              className="company-logo"
-              src={technion_medicine_logo}
-              alt="Company Logo"
+              className="s-open"
+              onClick={() => setToggle(false)}
+              src={hamLogo}
+              alt="Open menu"
             />
-          </div>
-          <div className="ease" />
-        </Wrapper>
-        <img
-          className="s-open"
-          onClick={() => setToggle(false)}
-          src={hamLogo}
-          alt="Open menu"
-        />
-      </nav>
+          </nav>
+        </>
+      )}
 
       <Switch>
         <Route path="/blog" exact={true}>
           <MdxContent />
         </Route>
+        <Route path="/tracks-details" exact={true}>
+          <TracksDetails />
+        </Route>
         <Route path="/" exact={true}>
           <HomePage />
         </Route>
       </Switch>
-    </Router>
+    </>
   );
 };
 

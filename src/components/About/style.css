@@ -22,7 +22,8 @@
   position: relative;
   font-family: 'Montserrat', sans-serif;
 }
-.LogoSectionAbout h1 {
+.LogoSectionAbout h1,
+.LogoSectionAbout .section-title {
   font-weight: 700;
   text-align: left;
 }

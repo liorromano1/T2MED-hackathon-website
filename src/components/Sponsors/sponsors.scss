@@ -12,6 +12,16 @@
 
 .sponsorUS {
   margin-bottom: 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.sponsorUS a {
+  display: inline-flex;
+  justify-content: center;
 }
 
 .Sponsor {
@@ -20,6 +30,12 @@
   display: flex;
   justify-content: center; /* Center the logos horizontally */
   align-items: center; /* Center the logos vertically */
+}
+
+.Sponsor a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .Sponsor img {

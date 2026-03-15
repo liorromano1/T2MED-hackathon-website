@@ -1,14 +1,14 @@
-import {useEffect, useRef, useState} from 'react';
-import {SOCIALS} from '../../Module/General';
-import {Btn} from '../Landing/index.jsx';
+import { useEffect, useRef, useState } from 'react';
+import { SOCIALS } from '../../Module/General';
+import { Btn } from '../Landing/index.jsx';
 import './sponsors.scss';
 
 function SponsorsHead() {
-  return <h1 className="shead">Sponsors & Partners</h1>;
+  return <h2 className="shead section-title">Sponsors & Partners</h2>;
 }
 
 function Sponsor(props) {
-  const {srcx, altText} = props;
+  const {srcx, altText, href, sponsorName} = props;
 
   const imageRef = useRef(null);
 
@@ -40,7 +40,14 @@ function Sponsor(props) {
 
   return (
     <div className="Sponsor">
-      <img ref={imageRef} src={srcx} alt={altText} className={imageType} />
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`Visit ${sponsorName} website`}
+      >
+        <img ref={imageRef} src={srcx} alt={altText} className={imageType} />
+      </a>
     </div>
   );
 }
@@ -60,4 +67,5 @@ function SponsorUS() {
   );
 }
 
-export {Sponsor, SponsorsHead, SponsorUS};
+export { Sponsor, SponsorsHead, SponsorUS };
+

@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;900&display=swap');
+
+.tracks-details-page {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f1f3f6;
+  background-repeat: repeat;
+  background-size: auto 100vh;
+  min-height: 100vh;
+  padding: 80px 20px 60px;
+}
+
+.tracks-details-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(45, 37, 79, 0.08);
+  padding: 60px;
+}
+
+/* Header */
+.tracks-details-header {
+  text-align: center;
+  margin-bottom: 50px;
+  padding-bottom: 30px;
+  border-bottom: 4px solid #D4A017;
+}
+
+.tracks-details-header h1 {
+  color: #2D254F;
+  font-size: 5rem;
+  font-weight: 900;
+  margin: 0 0 12px 0;
+  line-height: 1.2;
+}
+
+.tracks-details-header .subtitle {
+  color: #D4A017;
+  font-size: 1.7rem;
+  font-weight: 600;
+  font-style: italic;
+  margin: 0;
+}
+
+/* Sections */
+.intro-section,
+.format-section,
+.tracks-section,
+.closing-section {
+  margin-bottom: 50px;
+}
+
+.intro-section {
+  background-color: rgba(212, 160, 23, 0.05);
+  padding: 30px;
+  border-radius: 12px;
+  border-left: 4px solid #D4A017;
+}
+
+.intro-text {
+  font-size: 1.7rem;
+  line-height: 1.8;
+  color: #555555;
+  margin-bottom: 16px;
+}
+
+.intro-text:last-child {
+  margin-bottom: 0;
+}
+
+.intro-text strong {
+  color: #2D254F;
+  font-weight: 700;
+}
+
+/* Format Section */
+.format-section h2,
+.tracks-section h2,
+.closing-section h2 {
+  color: #2D254F;
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.format-block {
+  background-color: rgba(45, 37, 79, 0.03);
+  padding: 28px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  border-left: 4px solid #2D254F;
+}
+
+.format-block:last-child {
+  margin-bottom: 0;
+}
+
+.format-block h3 {
+  color: #2D254F;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 16px 0;
+}
+
+.format-block p {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #555555;
+  margin-bottom: 12px;
+}
+
+.format-block p:last-child {
+  margin-bottom: 0;
+}
+
+.format-block p strong {
+  color: #2D254F;
+  font-weight: 700;
+}
+
+/* Track Cards */
+.track-card {
+  background-color: #FFFFFF;
+  border: 2px solid rgba(212, 160, 23, 0.2);
+  border-radius: 12px;
+  margin-bottom: 32px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(45, 37, 79, 0.06);
+  transition: all 0.3s ease;
+}
+
+.track-card:hover {
+  box-shadow: 0 6px 20px rgba(212, 160, 23, 0.15);
+  transform: translateY(-2px);
+}
+
+.track-header {
+  background: linear-gradient(135deg, #2D254F 0%, #3d3460 100%);
+  padding: 28px 32px;
+  position: relative;
+}
+
+.track-title-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.track-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #D4A017;
+  color: #FFFFFF;
+  font-size: 1.9rem;
+  font-weight: 900;
+  padding: 6px 16px;
+  border-radius: 8px;
+  margin-bottom: 0;
+}
+
+.track-header h3 {
+  color: #FFFFFF;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.track-tagline {
+  color: #D4A017;
+  font-size: 1.8rem;
+  font-weight: 600;
+  font-style: italic;
+  margin: 0;
+}
+
+.track-content {
+  padding: 32px;
+}
+
+.track-content h4 {
+  color: #2D254F;
+  font-size: 1.9rem;  
+  font-weight: 700;
+  margin: 0 0 16px 0;
+  padding-top: 8px;
+}
+
+.track-content h4:first-child {
+  padding-top: 0;
+}
+
+.track-content p {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #555555;
+  margin-bottom: 16px;
+}
+
+.track-content p:last-child {
+  margin-bottom: 0;
+}
+
+.track-content p strong {
+  color: #2D254F;
+  font-weight: 700;
+}
+
+/* Closing Section */
+.closing-section {
+  text-align: center;
+  background: linear-gradient(135deg, rgba(212, 160, 23, 0.1) 0%, rgba(45, 37, 79, 0.05) 100%);
+  padding: 40px;
+  border-radius: 12px;
+}
+
+.closing-section p {
+  font-size: 1.65rem;
+  line-height: 1.8;
+  color: #555555;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.closing-divider {
+  margin: 35px auto 8px;
+  max-width: 780px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.closing-divider-line {
+  flex: 1;
+  height: 1px;
+  background-color: #D4A017;
+  opacity: 0.85;
+}
+
+.closing-divider-icon {
+  color: #D4A017;
+  font-size: 4rem;
+  line-height: 1;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tracks-details-page {
+    padding: 60px 16px 40px;
+  }
+
+  .tracks-details-container {
+    padding: 40px 24px;
+  }
+
+  .tracks-details-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .tracks-details-header .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .format-section h2,
+  .tracks-section h2,
+  .closing-section h2 {
+    font-size: 2rem;
+  }
+
+  .track-header h3 {
+    font-size: 1.6rem;
+  }
+
+  .track-tagline {
+    font-size: 1rem;
+  }
+
+  .track-content {
+    padding: 24px;
+  }
+
+  .format-block {
+    padding: 20px;
+  }
+
+  .intro-section {
+    padding: 24px;
+  }
+
+  .intro-text,
+  .format-block p,
+  .track-content p {
+    font-size: 1.2rem;
+  }
+
+  .closing-section p {
+    font-size: 1.15rem;
+  }
+
+  .closing-divider {
+    margin-top: 56px;
+    gap: 12px;
+  }
+
+  .closing-divider-icon {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tracks-details-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .tracks-details-header .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .track-header {
+    padding: 20px;
+  }
+
+  .track-content {
+    padding: 20px;
+  }
+
+  .track-header h3 {
+    font-size: 1.4rem;
+  }
+
+  .track-title-row {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+}

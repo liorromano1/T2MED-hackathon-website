@@ -1,5 +1,6 @@
 
 import { UseMedia } from 'hooks/useMedia';
+import { usePageSeo } from 'hooks/usePageSeo';
 import { useState } from 'react';
 
 import Col from 'react-bootstrap/Col';
@@ -34,9 +35,14 @@ import pattern from './assets/pattern4.png';
 const SponsorGroup = (props, index) => {
   return (
     <Row key={index}>
-      {props.map((s, i) => (
-        <Col key={s.src} className="" sm={12} lg={4} md={6}>
-          <Sponsor srcx={s.src} altText={`Sponsor ${i + 1}`} />
+      {props.map((s) => (
+        <Col key={s.id || s.src} className="" sm={12} lg={4} md={6}>
+          <Sponsor
+            srcx={s.src}
+            href={s.href}
+            sponsorName={s.name}
+            altText={`${s.name} logo`}
+          />
         </Col>
       ))}
     </Row>
@@ -68,13 +74,13 @@ const PrizeGroup = (props, index) => {
 // Prize group ending
 const TeamMembers = (props, index) => {
   return (
-    <Row key={index} className="members">
+    <div key={index} className="members members-grid">
       {props.map((s) => (
-        <Col key={s.name} className="" sm={12} lg={4} md={4}>
+        <div key={s.name} className="members-grid-item">
           <Member info={s} />
-        </Col>
+        </div>
       ))}
-    </Row>
+    </div>
   );
 };
 
@@ -163,7 +169,7 @@ const TracksSection = () => {
 
   return (
     <section className="tracks-mock-wrapper" id="tracks">
-      <h1>Tracks</h1>
+      <h2 className="section-title">Tracks</h2>
 
       <div className="tracks-intro">
         <p className="tracks-intro-title">Choose Your Track</p>
@@ -173,6 +179,14 @@ const TracksSection = () => {
           is judged within it first, then the top teams from every track advance
           to the Grand Finale where overall winners are chosen.
         </p>
+        <a 
+          href="/tracks-details" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="tracks-details-button"
+        >
+          Read Full Track Guide
+        </a>
       </div>
 
       <div className="tracks-layout">
@@ -229,6 +243,52 @@ export default function HomePage() {
   const [media, setMedia] = useState();
   UseMedia('min-width', 1000, setMedia);
 
+  usePageSeo({
+    title: 'T2MED Hackathon | Medical Innovation Hackathon',
+    description:
+      'T2MED is a medical innovation hackathon bringing together students, researchers, clinicians, and entrepreneurs to build impactful healthcare solutions.',
+    path: '/',
+    structuredData: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Event',
+        name: 'T2MED 2026 Medical Innovation Hackathon',
+        description:
+          'A medical innovation hackathon where students, researchers, clinicians, and entrepreneurs collaborate to build impactful healthcare solutions.',
+        url: 'https://t2med.netlify.app/',
+        startDate: '2026-05-06T09:00:00+03:00',
+        endDate: '2026-05-08T18:00:00+03:00',
+        eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+        eventStatus: 'https://schema.org/EventScheduled',
+        location: {
+          '@type': 'Place',
+          name: 'Technion Faculty of Medicine',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: 'TODO: Add full venue street address',
+            addressLocality: 'Haifa',
+            addressCountry: 'IL'
+          }
+        },
+        organizer: {
+          '@type': 'Organization',
+          name: 'T2MED',
+          url: 'https://t2med.netlify.app/'
+        }
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: 'T2MED',
+        url: 'https://t2med.netlify.app/',
+        sameAs: [
+          'https://www.instagram.com/t2med3ds/',
+          'https://www.linkedin.com/company/t2med/'
+        ]
+      }
+    ]
+  });
+
   return (
     <div className="Whole_div" style={{backgroundImage: `url(${pattern})`}}>
       <div className="color_sectiom" id="home">
@@ -279,9 +339,9 @@ export default function HomePage() {
             <div className="biztec-text">
               <h3 className="biztec-title">Biztec Partnership</h3>
               <p className="biztec-description">
-                Honored to partner with BizTec again! As tradition holds, the
-                top three teams will earn direct entry to BizTec and financial
-                support to bring their projects to life.
+                We are honored to partner with BizTec once again. As tradition holds,
+                the top three teams will earn direct entry to BizTec, with first place
+                also receiving financial support to bring their project to life.
               </p>
             </div>
           </div>
@@ -311,7 +371,7 @@ export default function HomePage() {
 
         {/* ********Judges here **** */}
 
-        <h1 id="judges">Our Judges</h1>
+        <h2 id="judges" className="section-title">Our Judges</h2>
         <p className="judges-info-text">
           <span className="highlight">Tap</span> or{' '}
           <span className="highlight">Hover</span> to learn more about the
@@ -320,7 +380,7 @@ export default function HomePage() {
 
         {JudgesInfo.map(TeamMembers)}
 
-        <h1 id="mentors">Our Mentors</h1>
+        <h2 id="mentors" className="section-title">Our Mentors</h2>
         {MentorsInfo.map(TeamMembers)}
         {/* {FOOTER.JOIN_TEAM.required && (
           <div className="mentor-section">
@@ -336,7 +396,7 @@ export default function HomePage() {
         {<br></br>}
         {<br></br>}
 
-        <h1 id="team">Our Team</h1>
+        <h2 id="team" className="section-title">Our Team</h2>
         {/* {FOOTER.JOIN_TEAM.required && (
           <JoinTeam
             placeholder="Join our team"

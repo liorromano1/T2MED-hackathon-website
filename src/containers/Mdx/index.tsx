@@ -1,5 +1,6 @@
 // import { MDXProvider } from '@mdx-js/react';
-import {Fragment} from 'react';
+import { Fragment } from 'react';
+import { usePageSeo } from '../../hooks/usePageSeo';
 // import Post from '../../blog/post.mdx';
 // import Content from "!babel-loader!@mdx-js/loader!../../blog/post.mdx";
 // ^-- Assumes an integration is used to compile MDX to JS, such as
@@ -14,16 +15,25 @@ const components = {
 };
 
 export const MdxContent = () => {
+  usePageSeo({
+    title: 'T2MED Blog | Medical Innovation Insights',
+    description:
+      'Updates, stories, and insights from the T2MED medical innovation hackathon community.',
+    path: '/blog'
+  });
+
   return (
     <Fragment>
-      <h1>cgdsjhgfchds</h1>
-      <h1>cgdsjhgfchds</h1>
-      <h1>cgdsjhgfchds</h1>
-      <h1>cgdsjhgfchds</h1>
-      <h1>cgdsjhgfchds</h1>
-      <h1>cgdsjhgfchds</h1>
-      <h1>cgdsjhgfchds</h1>
-      <h1>cgdsjhgfchds</h1>
+      <main style={{maxWidth: '900px', margin: '120px auto 80px', padding: '0 20px'}}>
+        <h1>T2MED Blog</h1>
+        <p>
+          This section will include updates from the T2MED community, hackathon announcements,
+          and highlights from teams, mentors, and partners.
+        </p>
+        <p>
+          TODO: Replace this placeholder with real MDX blog content before broad indexing.
+        </p>
+      </main>
     </Fragment>
   );
 };

@@ -17,7 +17,7 @@ const Btn = props => {
 const About = () => {
   return (
     <div className="AboutMe">
-      <h2>{TOP_SECTION.TITLE}</h2>
+      <h1>{TOP_SECTION.TITLE}</h1>
       <MytypedComponent />
       {/* <Countdown targetDate="2025-05-14T00:00:00" /> */}
     </div>

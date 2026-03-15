@@ -6,7 +6,7 @@ import './style.scss';
 function PrizeHeading(props) {
   return (
     <div className="PrizeHeading">
-      <h1>{props.type}</h1>
+      <h2 className="section-title">{props.type}</h2>
     </div>
   );
 }
@@ -63,5 +63,5 @@ function FirstPrize(props) {
   );
 }
 
-export { airplainImg, espressoImg, FirstPrize, garminImg, PrizeCard, PrizeHeading };
+export { FirstPrize, PrizeCard, PrizeHeading, airplainImg, espressoImg, garminImg };
 

@@ -108,6 +108,11 @@ img.square {       /* Hillel logo */
   transform: scale(1.0);
 }
 
+.member-img.member-drabrahampeled {
+  object-position: 50% 10%;
+  transform: scale(1.0);
+}
+
 h3 {
   font-size: clamp(1.6rem, 5vw, 2.8rem);
   color: #222;

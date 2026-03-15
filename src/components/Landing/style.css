@@ -51,7 +51,13 @@ button:hover {
   background-color: transparent;
 }
 
-.AboutMe h2 {
+.AboutMe {
+  position: relative;
+  z-index: 2;
+}
+
+.AboutMe > h1,
+.AboutMe > h2 {
   font-size: 8rem;
   font-family: 'Noto Sans', sans-serif;
   color: #FFFFFF;
@@ -141,7 +147,8 @@ button:hover .overlay {
     width: 100%;
     min-height: 280px;
   }
-  .AboutMe h2 {
+  .AboutMe > h1,
+  .AboutMe > h2 {
     font-size: 4rem;
   }
   .register {
