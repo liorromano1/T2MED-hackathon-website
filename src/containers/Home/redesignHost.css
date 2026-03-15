@@ -1,0 +1,13 @@
+.redesign-host {
+  width: 100%;
+  min-height: 100vh;
+  background: #09091a;
+}
+
+.redesign-frame {
+  width: 100%;
+  min-height: 100vh;
+  height: 100vh;
+  border: 0;
+  display: block;
+}

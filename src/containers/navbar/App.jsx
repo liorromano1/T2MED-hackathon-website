@@ -3,7 +3,7 @@ import { Route, BrowserRouter as Router, Switch, useLocation } from 'react-route
 import { HashLink as Link } from 'react-router-hash-link';
 import styled from 'styled-components';
 import technion_medicine_logo from '../../Module/Assets/sponsorsLogos/medicine.png';
-import HomePage from '../Home/HomePage';
+import RedesignHost from '../Home/RedesignHost';
 import TracksDetails from '../TracksDetails/TracksDetails';
 import logoClose from './assets/ham-c.svg';
 import hamLogo from './assets/ham.svg';
@@ -108,7 +108,7 @@ const NAVBAR = props => {
 
 const AppContent = ({ toggle, setToggle, isOffset, navigation }) => {
   const location = useLocation();
-  const hideNavbar = location.pathname === '/tracks-details';
+  const hideNavbar = location.pathname === '/tracks-details' || location.pathname === '/';
 
   return (
     <>
@@ -189,7 +189,7 @@ const AppContent = ({ toggle, setToggle, isOffset, navigation }) => {
           <TracksDetails />
         </Route>
         <Route path="/" exact={true}>
-          <HomePage />
+          <RedesignHost />
         </Route>
       </Switch>
     </>
