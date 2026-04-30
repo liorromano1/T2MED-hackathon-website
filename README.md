@@ -45,6 +45,13 @@ npm run build
 
 `This will start client app on localhost:3000`
 
+## Redesign Layout Source Of Truth
+
+- Edit only `public/redesign-layout.html` during development.
+- `localhost:3000` serves this file directly at `/redesign-layout.html`.
+- Do not edit `build/redesign-layout.html`; files in `build/` are generated output from `npm run build`.
+- If a `build/` folder exists locally, it can be deleted any time and regenerated when needed.
+
 ## [Change and customize every section according to your need]()
 
 Now once you have project running on your local environment and repo in github you are all set to customize and publish your hackathon website.

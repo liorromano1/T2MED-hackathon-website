@@ -1,4 +1,5 @@
 import React from 'react';
+import { MENTOR_TRACK_META, MENTOR_TRACKS } from '../../Module/General';
 import { Btn } from '../Landing/index.jsx';
 import './style.css';
 
@@ -20,7 +21,13 @@ const JoinTeam: React.FC<IJoinTeam> = ({placeholder, formLink, content}) => {
 };
 
 const Member = ({ info }: { info: any }) => {
-  const { role, name, img, linkedin, bio, subtitle } = info;
+  const { role, name, img, linkedin, bio, subtitle, mentorTracks } = info;
+  const hasAllTracks = Array.isArray(mentorTracks) && mentorTracks.includes(MENTOR_TRACKS.ALL_TRACKS);
+  const trackIcons = hasAllTracks
+    ? [MENTOR_TRACKS.ALL_TRACKS]
+    : Array.isArray(mentorTracks)
+      ? mentorTracks.slice(0, 3)
+      : [];
 
   return (
     <div className="member">
@@ -37,6 +44,28 @@ const Member = ({ info }: { info: any }) => {
       
       {subtitle && (
         <p className="member-subtitle">{subtitle}</p>
+      )}
+
+      {trackIcons.length > 0 && (
+        <div className="mentor-track-icons" aria-label="Mentor track relevance">
+          {trackIcons.map((trackKey: string) => {
+            const trackMeta = MENTOR_TRACK_META[trackKey as keyof typeof MENTOR_TRACK_META];
+            if (!trackMeta) {
+              return null;
+            }
+
+            return (
+              <span
+                key={`${name}-${trackKey}`}
+                className="mentor-track-icon"
+                title={trackMeta.label}
+                aria-label={trackMeta.label}
+              >
+                <i className={trackMeta.iconClass} aria-hidden="true"></i>
+              </span>
+            );
+          })}
+        </div>
       )}
 
       {bio && (

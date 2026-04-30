@@ -139,6 +139,31 @@ h3 {
   line-height: 1.4;
 }
 
+.mentor-track-icons {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  margin-bottom: 0.85rem;
+  min-height: 2rem;
+}
+
+.mentor-track-icon {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(45, 37, 79, 0.78);
+  background: rgba(45, 37, 79, 0.08);
+  border: 1px solid rgba(45, 37, 79, 0.14);
+}
+
+.mentor-track-icon i {
+  font-size: 1.05rem;
+}
+
 /* Initially hidden bio box */
 .bio-box {
   background: white;
@@ -205,6 +230,34 @@ h3 {
   color: #555;
   margin-bottom: 2rem;
   font-weight: 500;
+}
+
+.mentors-info-text {
+  text-align: center;
+  font-size: 1.4rem;
+  color: #5a5770;
+  margin: 0.6rem auto 1.8rem;
+  font-weight: 500;
+  line-height: 1.7;
+  max-width: 980px;
+}
+
+.mentor-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0 0.3rem;
+}
+
+.mentor-legend-item i {
+  color: rgba(45, 37, 79, 0.84);
+  font-size: 1.2rem;
+}
+
+.mentor-legend-separator {
+  color: rgba(45, 37, 79, 0.45);
+  font-size: 1.2rem;
+  margin-left: 0.2rem;
 }
 
 .judges-info-text .highlight {

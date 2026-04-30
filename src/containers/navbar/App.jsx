@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import technion_medicine_logo from '../../Module/Assets/sponsorsLogos/medicine.png';
 import RedesignHost from '../Home/RedesignHost';
 import TracksDetails from '../TracksDetails/TracksDetails';
+import Projects from '../Projects/Projects';
 import logoClose from './assets/ham-c.svg';
 import hamLogo from './assets/ham.svg';
 import './styles.scss';
@@ -108,7 +109,7 @@ const NAVBAR = props => {
 
 const AppContent = ({ toggle, setToggle, isOffset, navigation }) => {
   const location = useLocation();
-  const hideNavbar = location.pathname === '/tracks-details' || location.pathname === '/';
+  const hideNavbar = location.pathname === '/tracks-details' || location.pathname === '/' || location.pathname === '/projects';
 
   return (
     <>
@@ -187,6 +188,9 @@ const AppContent = ({ toggle, setToggle, isOffset, navigation }) => {
         </Route>
         <Route path="/tracks-details" exact={true}>
           <TracksDetails />
+        </Route>
+        <Route path="/projects" exact={true}>
+          <Projects />
         </Route>
         <Route path="/" exact={true}>
           <RedesignHost />

@@ -1,0 +1,37 @@
+<svg width="1200" height="820" viewBox="0 0 1200 820" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="820" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#12122D"/>
+      <stop offset="1" stop-color="#1A1A3C"/>
+    </linearGradient>
+    <linearGradient id="waveA" x1="84" y1="120" x2="1110" y2="724" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#9B6BF2" stop-opacity="0.40"/>
+      <stop offset="1" stop-color="#F5A623" stop-opacity="0.18"/>
+    </linearGradient>
+    <linearGradient id="waveB" x1="80" y1="260" x2="1040" y2="760" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#EEF2F7" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#9B6BF2" stop-opacity="0.08"/>
+    </linearGradient>
+    <filter id="soft" x="0" y="0" width="1200" height="820" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="820" fill="url(#bg)"/>
+
+  <circle cx="910" cy="180" r="168" fill="#9B6BF2" fill-opacity="0.14" filter="url(#soft)"/>
+  <circle cx="290" cy="640" r="152" fill="#F5A623" fill-opacity="0.12" filter="url(#soft)"/>
+
+  <path d="M40 498C180 430 320 416 460 452C600 488 740 572 880 586C978 594 1079 572 1160 526V820H40V498Z" fill="url(#waveA)"/>
+  <path d="M40 566C175 528 320 531 462 566C604 601 742 664 886 670C982 674 1076 650 1160 615V820H40V566Z" fill="url(#waveB)"/>
+
+  <g opacity="0.82">
+    <rect x="122" y="120" width="274" height="78" rx="10" fill="#09091A" fill-opacity="0.44" stroke="#9B6BF2" stroke-opacity="0.35"/>
+    <text x="146" y="166" fill="#EEF2F7" font-family="Outfit, Arial, sans-serif" font-size="34" font-weight="600" letter-spacing="0.03em">Recharge Zone</text>
+  </g>
+
+  <g opacity="0.70">
+    <rect x="122" y="228" width="336" height="44" rx="8" fill="#09091A" fill-opacity="0.32" stroke="#9B6BF2" stroke-opacity="0.20"/>
+    <text x="142" y="257" fill="#EEF2F7" font-family="Outfit, Arial, sans-serif" font-size="20" letter-spacing="0.02em">Temporary visual placeholder</text>
+  </g>
+</svg>

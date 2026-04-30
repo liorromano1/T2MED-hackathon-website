@@ -22,7 +22,7 @@ const TracksDetails = () => {
           <p className="intro-text">
             We are thrilled to announce the opening of registration for the <strong>T2MED 2026</strong> medical 
             innovation hackathon. This event represents the forefront of entrepreneurial-technological activity 
-            on campus, bringing together engineering, science, and medicine to tackle core challenges of the 
+            at the <strong>Technion Faculty of Medicine in Bat Galim, Haifa</strong>, bringing together engineering, science, and medicine to tackle core challenges of the 
             modern healthcare system.
           </p>
           <p className="intro-text">

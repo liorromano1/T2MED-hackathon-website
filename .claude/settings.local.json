@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp \"C:/Users/user/Desktop/Lior/Studies/BioMedicalEngeneering/Hackathons/T2Med/תמונות ל 2026/people/EFRAT CITY.jpg\" \"c:/Users/user/Desktop/Lior/Studies/BioMedicalEngeneering/Hackathons/T2Med/T2MED-hackathon-website/src/Module/Assets/judgei/efrat_elifaz_city.jpg\")",
+      "Bash(cp \"C:/Users/user/Desktop/Lior/Studies/BioMedicalEngeneering/Hackathons/T2Med/תמונות ל 2026/people/EFRAT CITY.jpg\" \"c:/Users/user/Desktop/Lior/Studies/BioMedicalEngeneering/Hackathons/T2Med/T2MED-hackathon-website/public/images/judges/efrat_elifaz_city.jpg\")",
+      "Bash(xargs grep:*)",
+      "Bash(cp 'c:/Users/user/Desktop/Lior/Studies/BioMedicalEngeneering/Hackathons/T2Med/תמונות ל 2026/Sponsors & partners Logos/Sponsers Logos/Base44 Wix/White logo+trans bg.png' c:/Users/user/Desktop/Lior/Studies/BioMedicalEngeneering/Hackathons/T2Med/T2MED-hackathon-website/public/images/sponsors/base44_wix.png)",
+      "Bash(cp 'c:/Users/user/Desktop/Lior/Studies/BioMedicalEngeneering/Hackathons/T2Med/תמונות ל 2026/Sponsors & partners Logos/Sponsers Logos/Peregrine Logo.png' c:/Users/user/Desktop/Lior/Studies/BioMedicalEngeneering/Hackathons/T2Med/T2MED-hackathon-website/public/images/sponsors/peregrine.png)",
+      "Bash(cp 'c:/Users/user/Desktop/Lior/Studies/BioMedicalEngeneering/Hackathons/T2Med/תמונות ל 2026/Sponsors & partners Logos/Sponsers Logos/novocure Logo.png' 'c:/Users/user/Desktop/Lior/Studies/BioMedicalEngeneering/Hackathons/T2Med/T2MED-hackathon-website/public/images/sponsors/Novocure Logo.png')",
+      "Bash(cp 'c:/Users/user/Desktop/Lior/Studies/BioMedicalEngeneering/Hackathons/T2Med/תמונות ל 2026/people/to add/Dr. Amir Bilder.jpeg' c:/Users/user/Desktop/Lior/Studies/BioMedicalEngeneering/Hackathons/T2Med/T2MED-hackathon-website/src/Module/Assets/teami/amir_bilder.jpeg)",
+      "Bash(cp 'c:/Users/user/Desktop/Lior/Studies/BioMedicalEngeneering/Hackathons/T2Med/תמונות ל 2026/people/to add/Dr. Amir Bilder.jpeg' c:/Users/user/Desktop/Lior/Studies/BioMedicalEngeneering/Hackathons/T2Med/T2MED-hackathon-website/public/images/mentors/amir_bilder.jpeg)",
+      "Read(//c/Users/user/Desktop/Lior/Studies/BioMedical Engineering/Hackathons/T2Med/**)",
+      "Bash(python3 -c ' *)",
+      "Bash(python -c ' *)"
+    ]
+  }
+}
