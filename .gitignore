@@ -22,3 +22,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Images (mentors, judges, sponsors, etc. - keep local only)
+public/images/
